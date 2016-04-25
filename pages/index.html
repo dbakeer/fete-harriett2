@@ -15,53 +15,23 @@
 {% extends "templates/partials/base.html" %}
 
 {# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
-{% block title %}{% parent %} - Homepage{% endblock %}
+{% block title %}{% parent %}{% endblock %}
 
 {% block content %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
+  <img class="whatever" src="https://media.giphy.com/media/3osxYbdfruMDCIVa3C/giphy.gif">
 
-        <h1>Hello <a href="http://getbootstrap.com/">Boostrap</a>!</h1>
+  {# If you have at least content page type, we show a list. #}
+  {% if cms_types|size !== 0 %}
 
-        <p>
-          This theme installed Bootstrap's 3.3.1 source LESS and Javascript files.
-          It also set up some <a href="http://gruntjs.com">Grunt</a> watch commands to build CSS from the <code>less</code> folder as you build.
-          You'll need to <strong>restart your local server</strong> to get it to operate properly.
-        </p>
+    <h3>Content types you've created in the CMS so far.</h3>
 
-        <h3>If you need to update boostrap.</h3>
+    <ul>
+    {% for type in cms_types %}
+      <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
+    {% endfor %}
+    </ul>
 
-        <ol>
-          <li>Open your terminal and navigate to this site's directory</li>
-          <li>Run <code>npm install -g bower</code></li>
-          <li>Run <code>bower update</code></li>
-          <li>Run <code>grunt copy</code></li>
-        </ol>
-
-        <hr/>
-
-        <p>This is your homepage, located at /pages/index.html.</p>
-
-        <p><a href="/cms/" class="btn btn-primary">Looking for the CMS?</a></p>
-
-        {# If you have at least content page type, we show a list. #}
-        {% if cms_types|size !== 0 %}
-
-          <h3>Content types you've created in the CMS so far.</h3>
-
-          <ul>
-          {% for type in cms_types %}
-            <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
-          {% endfor %}
-          </ul>
-
-        {% endif %}
-
-      </div>
-    </div>
-  </div>
+  {% endif %}
 
 {% endblock %}
-
