@@ -1,0 +1,21 @@
+{% extends "templates/partials/inner_page.html" %}
+
+{% block inner_content %}
+    <ul class="work">
+    {% for item in work|sort('sort_order') %}
+      <li>
+        <div class="gallery">
+          {% for image in item.gallery %}
+            <a href="{{ image.url }}" class="fluidbox"><img src="{{ image|imageSize(500) }}" /></a>
+          {% endfor %}
+        </div>
+        <div class="desc">
+          <p class="time">{{ item.time_period }}</p>
+          <h3><a href="{{ item.link }}">{{ item.name }}</a></h3>
+          <div class="text">{{ item.description|safe }}</div>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
