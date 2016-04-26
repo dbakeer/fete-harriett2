@@ -15,13 +15,19 @@ body {
 header {
   position: fixed;
   width: calc(100vw - 10px);
+  font-size: 22px;
+  line-spacing: 26pt;
+  margin: 20px 0 0 0;
 }
 
+.lips {
+  float: right;
+}
 
 /* LOGO */
 .section {
   width: 100vw;
-  height: 100vw;
+  /*height: 100vw;*/
 }
 
 .stacked-logo {
