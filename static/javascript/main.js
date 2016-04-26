@@ -4,22 +4,27 @@ fullpage.initialize('#fullpage', {
   css3:true,
   scrollbar: true,
   onLeave: function(index, nextIndex, direction) {
-     console.log(index, nextIndex, direction);
-     if (index == 3 && direction == 'down') {
-       $('header a').css('color', 'white');
-     }
-     else if (index == 5 && direction == 'up') {
-       $('header a').css('color', 'white');
-     }
-     else if (index == 1 && nextIndex == 4 && direction == 'down') {
-       $('header a').css('color', 'white');
-     }
-     else if (index == 2 && nextIndex == 4 && direction == 'down') {
-       $('header a').css('color', 'white');
-     }
-     else {
-       $('header a').css('color', 'black');
-     }
+    if (index == 3 && direction == 'down') {
+      $('header a').css('color', 'white');
+    } else if (index == 5 && direction == 'up') {
+      $('header a').css('color', 'white');
+    } else if (index == 1 && nextIndex == 4 && direction == 'down') {
+      $('header a').css('color', 'white');
+    }
+    else if (index == 2 && nextIndex == 4 && direction == 'down') {
+      $('header a').css('color', 'white');
+    } else {
+      $('header a').css('color', 'black');
+    }
+  },
+  afterLoad: function(anchorLink, index){
+    if(anchorLink == 1){
+      $('header a').css('color', 'transparent');
+    }
+
+    if (anchorLink == 'feteharriett'){
+      $('header a').css('color', 'transparent');
+    }
   }
   // navigation: true
 });
