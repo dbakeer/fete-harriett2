@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #e6e6e6;
+  background-color: #f2f0ed;
   margin: 10px;
   text-transform: uppercase;
   font-family: TradeGothic;
@@ -13,24 +13,140 @@ body {
 
 /* HEADER */
 header {
-  position: fixed;
   width: calc(100vw - 10px);
   font-size: 22px;
-  line-spacing: 26pt;
-  margin: 20px 0 0 0;
+  line-height: 36px;
+  z-index: 5;
+  position: relative;
+}
+
+nav {
+  line-height: 36px;
+}
+
+.active a {
+  text-decoration: underline;
+}
+
+#fullpage {
+  margin-top: -224px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .lips {
   float: right;
 }
 
-/* LOGO */
 .section {
-  width: 100vw;
-  /*height: 100vw;*/
+  font-size: 22px;
 }
 
 .stacked-logo {
   margin: auto;
   display: block;
+  padding: 200px 0 0 0;
+}
+
+.host-img {
+  z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+  .stacked-logo {
+    width: 100vw;
+  }
+  .art-logo-fete {
+    z-index: 3;
+    width: 250px;
+    margin: 25px 0 0 -200px !important;
+  }
+  .art-logo-harriett {
+    width: 300px;
+    margin: 300px 0 0 -100px !important;
+  }
+  .art-logo-photo {
+    width: 400px;
+    margin: 100px 0 0 -200px !important;
+  }
+  .section {
+    font-size: 16px;
+  }
+}
+
+.art-logo-fete {
+  z-index: 3;
+  position: absolute;
+  margin: -50px -429px 0;
+}
+
+.art-logo-photo {
+  margin: 75px -290px 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.art-logo-harriett {
+  z-index: 3;
+  position: absolute;
+  margin: 350px 0 0 -120px;
+}
+
+/* MAIN SITE */
+.section {
+  width: 100vw;
+  padding: 75px 0 0 0;
+  text-align: center;
+}
+
+.host-images {
+  z-index: -2;
+}
+
+.host {
+  display: table;
+}
+
+.host-container {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+}
+
+.hosted-header {
+  margin-bottom: 50px;
+}
+
+.special-performance {
+  margin-top: 50px;
+}
+
+.sponsored-by {
+  margin-top: 50px;
+}
+
+.tickets {
+  color: white !important;
+  background: black;
+}
+
+button {
+  background: transparent;
+  font-family: TradeGothic;
+  height: 30px;
+  width: 200px;
+  border: 1px black solid;
+  padding: 15px 0 0 0;
+}
+
+button:focus {
+  outline: 0;
 }
