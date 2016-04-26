@@ -19,7 +19,30 @@
 
 {% block content %}
 
-  <img class="whatever" src="https://media.giphy.com/media/3osxYbdfruMDCIVa3C/giphy.gif">
+
+
+  <!-- MAIN PAGE START -->
+  <div id="fullpage">
+    <div class="section splash">
+      <img class="stacked-logo" src="../static/images/logo_stacked.svg">
+    </div>
+    <div class="section hosts">
+    </div>
+    <div class="section info">
+    </div>
+    <div class="section newsletter">
+    </div>
+    <div class="section location">
+    </div>
+    <div class="section contact">
+    </div>
+  </div>
+
+
+
+
+  <!-- MAIN PAGE END -->
+
 
   {# If you have at least content page type, we show a list. #}
   {% if cms_types|size !== 0 %}

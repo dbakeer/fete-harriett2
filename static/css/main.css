@@ -1,4 +1,30 @@
+/* GENERAL */
+@font-face {
+    font-family: TradeGothic;
+    src: url(../fonts/trade_gothic.ttf);
+}
+
 body {
-  padding: 40px;
-  max-width: 1000px;
+  background-color: #e6e6e6;
+  margin: 10px;
+  text-transform: uppercase;
+  font-family: TradeGothic;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: calc(100vw - 10px);
+}
+
+
+/* LOGO */
+.section {
+  width: 100vw;
+  height: 100vw;
+}
+
+.stacked-logo {
+  margin: auto;
+  display: block;
 }
