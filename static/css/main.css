@@ -22,7 +22,7 @@ header {
   position: absolute;
   transition: color 0.7s;
   font-size: 22px;
-  width: 100%;
+  width: 90%;
 }
 
 header a {
@@ -47,10 +47,17 @@ nav {
 .lips,
 .lips-white {
   float: right;
-  margin: -80px 25px 0 0;
+  margin: 20px 25px 0 0;
   transition: opacity 0.7s;
 }
 
+.lips img {
+  float: right;
+}
+
+.hidden {
+  font-size: 22px;
+}
 
 
 /* FULLPAGE STUFF */
@@ -66,7 +73,6 @@ nav {
 .stacked-logo {
   margin: auto;
   display: block;
-  padding: 200px 0 0 0;
 }
 
 .art-logo-fete {
@@ -97,8 +103,8 @@ nav {
 
 .host-images {
   z-index: -3;
-  padding: 0 25px;
   position: relative;
+  width: 90vw;
 }
 
 .host-img {
@@ -106,44 +112,37 @@ nav {
 }
 
 .sophie {
-  margin: 306px 0 0 72px;
-  width: 17%;
+  margin: 20vh 0 0 12vw;
+  width: 17vw;
 }
 
 .roanne {
-  margin: 416px 0 0 -250px;
-  width: 15%;
+  margin: 25vh 0 0 -12vw;
+  width: 13vw;
 }
 
 .lykke1 {
-  margin: 625px 0 0 300px;
-  width: 13%;
+  margin: 35vh 0 0 24vw;
+  width: 13vw;
 }
 
 .lykke2 {
-  margin: 725px 0 0 -650px;
-  width: 30%;
+  margin: 45vh 0 0 -29vw;
+  width: 30vw;
 }
 
 .maggie {
-  margin: 25px 0 0 336px;
-  width: 10%;
+  margin: 0 0 0 33vw;
+  width: 8vw;
 }
 
 .lena {
-  margin: 50px 0 0 -500px;
+  margin: 0 0 0 -30vw;
+  width: 10vw;
 }
 
 .host {
   display: table;
-}
-
-.host-container {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100vw;
-  position: absolute;
-  top: 0;
 }
 
 .hosted-header {
@@ -204,9 +203,7 @@ button:focus {
 }
 
 .art-splash {
-  margin-top: 200px;
-  /*opacity: 1;
-  transition: opacity 8s;*/
+  margin-top: -25%;
 }
 
 .contact,
@@ -214,10 +211,6 @@ button:focus {
   background: black;
   color: #f2f0ed;
 }
-
-/*.contact {
-  padding: 25px 0 10px 0;
-}*/
 
 .contact-content {
   padding: 75px 0 50px 0;
@@ -228,4 +221,13 @@ button:focus {
   fill: white;
   width: 200px;
   height: auto;
+}
+
+#map {
+  height: 600px;
+  margin: 0 27% 75px;
+}
+
+#location-details {
+  padding: 75px 0 0 0;
 }

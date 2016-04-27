@@ -46,10 +46,6 @@ $(document).ready(function() {
   });
 });
 
-$(window).on('load', function(){
-  // $('.stacked-logo').fadeOut(2000);
-});
-
 jQuery('img.svg').each(function(){
     var $img = jQuery(this);
     var imgID = $img.attr('id');
