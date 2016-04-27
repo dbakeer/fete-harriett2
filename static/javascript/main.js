@@ -9,27 +9,33 @@ $(document).ready(function() {
       if (index == 3 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-        $('.lips-white').css('opacity', '1');
+        $('.hidden').css('color', '#f2f0ed');
+        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 5 && direction == 'up') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-        $('.lips-white').css('opacity', '1');
+        $('.hidden').css('color', '#f2f0ed');
+        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 1 && nextIndex == 4 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-        $('.lips-white').css('opacity', '1');
+        $('.hidden').css('color', '#f2f0ed');
+        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 2 && nextIndex == 4 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-        $('.lips-white').css('opacity', '1');
+        $('.hidden').css('color', '#f2f0ed');
+        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 6 && nextIndex == 4 && direction == 'up') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-        $('.lips-white').css('opacity', '1');
+        $('.hidden').css('color', '#f2f0ed');
+        $('#lip-reveal').css('fill', '#f2f0ed');
       } else {
         $('header a').css('color', 'black');
         $('header li').css('color', 'black');
-        $('.lips-white').css('opacity', '0');
+        $('.hidden').css('color', 'black');
+        $('#lip-reveal').css('fill', 'black');
       }
     },
     afterLoad: function(anchorLink, index){
