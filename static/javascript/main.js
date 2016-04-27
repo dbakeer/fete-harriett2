@@ -6,26 +6,32 @@ fullpage.initialize('#fullpage', {
   onLeave: function(index, nextIndex, direction) {
     if (index == 3 && direction == 'down') {
       $('header a').css('color', 'white');
+      $('header').css('color', 'white');
     } else if (index == 5 && direction == 'up') {
       $('header a').css('color', 'white');
+      $('header').css('color', 'white');
     } else if (index == 1 && nextIndex == 4 && direction == 'down') {
       $('header a').css('color', 'white');
+      $('header').css('color', 'white');
     }
     else if (index == 2 && nextIndex == 4 && direction == 'down') {
       $('header a').css('color', 'white');
+      $('header').css('color', 'white');
     } else {
       $('header a').css('color', 'black');
+      $('header').css('color', 'black');
     }
   },
   afterLoad: function(anchorLink, index){
     if(index == 1){
-      $('header a').css('opacity', '0');
+      $('header').css('opacity', '0');
+      $('.lips').css('opacity', '0');
     }
     else {
-      $('header a').css('opacity', '1');
+      $('header').css('opacity', '1');
+      $('.lips').css('opacity', '1');
     }
   }
-  // navigation: true
 });
 
 

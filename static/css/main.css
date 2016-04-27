@@ -18,6 +18,7 @@ header {
   line-height: 36px;
   z-index: 5;
   position: relative;
+  transition: color 0.7s;
 }
 
 nav {
