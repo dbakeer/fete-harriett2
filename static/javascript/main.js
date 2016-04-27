@@ -18,12 +18,11 @@ fullpage.initialize('#fullpage', {
     }
   },
   afterLoad: function(anchorLink, index){
-    if(anchorLink == 1){
-      $('header a').css('color', 'transparent');
+    if(index == 1){
+      $('header a').css('display', 'none');
     }
-
-    if (anchorLink == 'feteharriett'){
-      $('header a').css('color', 'transparent');
+    else {
+      $('header a').css('display', 'inline-block');
     }
   }
   // navigation: true
