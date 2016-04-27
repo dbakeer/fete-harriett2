@@ -19,10 +19,10 @@ fullpage.initialize('#fullpage', {
   },
   afterLoad: function(anchorLink, index){
     if(index == 1){
-      $('header a').css('display', 'none');
+      $('header a').css('opacity', '0');
     }
     else {
-      $('header a').css('display', 'inline-block');
+      $('header a').css('opacity', '1');
     }
   }
   // navigation: true
