@@ -11,6 +11,9 @@ body {
   font-family: TradeGothic;
 }
 
+
+
+
 /* HEADER */
 header {
   font-size: 22px;
@@ -19,7 +22,6 @@ header {
   position: absolute;
   transition: color 0.7s;
   font-size: 22px;
-  margin-top: 20%;
   width: 100%;
 }
 
@@ -28,7 +30,6 @@ header a {
   text-decoration: none;
   display: inline-block;
   transition: color 0.7s;
-  /*transition-duration: 0.7s;*/
 }
 
 header a:hover {
@@ -50,46 +51,22 @@ nav {
   transition: opacity 0.7s;
 }
 
+
+
+/* FULLPAGE STUFF */
 .section {
   font-size: 22px;
   text-align: center;
 }
 
+
+
+
+/* SPLASH PAGE */
 .stacked-logo {
   margin: auto;
   display: block;
   padding: 200px 0 0 0;
-}
-
-.host-img {
-  z-index: -1;
-}
-
-@media screen and (max-width: 800px) {
-  .stacked-logo {
-    width: 100vw;
-    padding: 0 0 0 0 !important;
-  }
-  /*.art-logo-fete {
-    z-index: 3;
-    width: 250px;
-    margin: 25px 0 0 -200px !important;
-  }
-  .art-logo-harriett {
-    width: 300px;
-    margin: 300px 0 0 -100px !important;
-  }
-  .art-logo-photo {
-    width: 400px;
-    margin: 100px 0 0 -200px !important;
-  }*/
-  .section {
-    font-size: 16px;
-    padding: 0 0 0 0 !important;
-  }
-  .menu {
-    display: none;
-  }
 }
 
 .art-logo-fete {
@@ -108,6 +85,14 @@ nav {
   z-index: 3;
   position: absolute;
   margin: 350px 0 0 -120px;
+}
+
+
+
+
+/*  HOST PAGE */
+.host-img {
+  z-index: -1;
 }
 
 .host-images {
@@ -174,6 +159,38 @@ nav {
   margin-top: 50px;
 }
 
+
+
+/**/
+
+/* MOBILE STYLING*/
+@media screen and (max-width: 800px) {
+  .stacked-logo {
+    width: 100vw;
+    padding: 0 0 0 0 !important;
+  }
+  /*.art-logo-fete {
+    z-index: 3;
+    width: 250px;
+    margin: 25px 0 0 -200px !important;
+  }
+  .art-logo-harriett {
+    width: 300px;
+    margin: 300px 0 0 -100px !important;
+  }
+  .art-logo-photo {
+    width: 400px;
+    margin: 100px 0 0 -200px !important;
+  }*/
+  .section {
+    font-size: 16px;
+    padding: 0 0 0 0 !important;
+  }
+  #menu {
+    display: none;
+  }
+}
+
 .tickets {
   color: #f2f0ed !important;
   background: black;
@@ -202,4 +219,10 @@ button:focus {
   margin-top: 200px;
   /*opacity: 1;
   transition: opacity 8s;*/
+}
+
+.contact .content {
+  background: black;
+  height: auto !important;
+  margin: 0 auto;
 }
