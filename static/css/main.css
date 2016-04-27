@@ -144,7 +144,6 @@ nav {
   width: 100vw;
   position: absolute;
   top: 0;
-  padding: 75px 0 0 0;
 }
 
 .hosted-header {
@@ -191,11 +190,6 @@ nav {
   }
 }
 
-.tickets {
-  color: #f2f0ed !important;
-  background: black;
-}
-
 button {
   background: transparent;
   font-family: TradeGothic;
@@ -209,20 +203,29 @@ button:focus {
   outline: 0;
 }
 
-#info-details,
-#ticket-details,
-#location-details {
-  padding: 75px 0 0 0;
-}
-
 .art-splash {
   margin-top: 200px;
   /*opacity: 1;
   transition: opacity 8s;*/
 }
 
-.contact .content {
+.contact,
+.tickets {
   background: black;
-  height: auto !important;
-  margin: 0 auto;
+  color: #f2f0ed;
+}
+
+/*.contact {
+  padding: 25px 0 10px 0;
+}*/
+
+.contact-content {
+  padding: 75px 0 50px 0;
+  text-align: center;
+}
+
+#contact-logo {
+  fill: white;
+  width: 200px;
+  height: auto;
 }
