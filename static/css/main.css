@@ -6,31 +6,21 @@
 
 body {
   background-color: #f2f0ed;
-  margin: 10px;
+  margin: 0 10px;
   text-transform: uppercase;
   font-family: TradeGothic;
 }
 
 /* HEADER */
 header {
-  width: calc(100vw - 10px);
   font-size: 22px;
   line-height: 36px;
   z-index: 5;
-  position: relative;
+  position: absolute;
   transition: color 0.7s;
-}
-
-nav {
-  line-height: 36px;
-}
-
-.active a {
-  text-decoration: underline;
-}
-
-#fullpage {
-  margin-top: -224px;
+  font-size: 22px;
+  margin-top: 20%;
+  width: 100%;
 }
 
 header a {
@@ -45,12 +35,24 @@ header a:hover {
   text-decoration: underline;
 }
 
-.lips {
+nav {
+  line-height: 36px;
+}
+
+.active a {
+  text-decoration: underline;
+}
+
+.lips,
+.lips-white {
   float: right;
+  margin: -80px 25px 0 0;
+  transition: opacity 0.7s;
 }
 
 .section {
   font-size: 22px;
+  text-align: center;
 }
 
 .stacked-logo {
@@ -66,8 +68,9 @@ header a:hover {
 @media screen and (max-width: 800px) {
   .stacked-logo {
     width: 100vw;
+    padding: 0 0 0 0 !important;
   }
-  .art-logo-fete {
+  /*.art-logo-fete {
     z-index: 3;
     width: 250px;
     margin: 25px 0 0 -200px !important;
@@ -79,9 +82,13 @@ header a:hover {
   .art-logo-photo {
     width: 400px;
     margin: 100px 0 0 -200px !important;
-  }
+  }*/
   .section {
     font-size: 16px;
+    padding: 0 0 0 0 !important;
+  }
+  .menu {
+    display: none;
   }
 }
 
@@ -103,15 +110,43 @@ header a:hover {
   margin: 350px 0 0 -120px;
 }
 
-/* MAIN SITE */
-.section {
-  width: 100vw;
-  padding: 75px 0 0 0;
-  text-align: center;
+.host-images {
+  z-index: -3;
+  padding: 0 25px;
+  position: relative;
 }
 
-.host-images {
-  z-index: -2;
+.host-img {
+  position: absolute;
+}
+
+.sophie {
+  margin: 306px 0 0 72px;
+  width: 17%;
+}
+
+.roanne {
+  margin: 416px 0 0 -250px;
+  width: 15%;
+}
+
+.lykke1 {
+  margin: 625px 0 0 300px;
+  width: 13%;
+}
+
+.lykke2 {
+  margin: 725px 0 0 -650px;
+  width: 30%;
+}
+
+.maggie {
+  margin: 25px 0 0 336px;
+  width: 10%;
+}
+
+.lena {
+  margin: 50px 0 0 -500px;
 }
 
 .host {
@@ -122,6 +157,9 @@ header a:hover {
   display: table-cell;
   vertical-align: middle;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  padding: 75px 0 0 0;
 }
 
 .hosted-header {
@@ -137,7 +175,7 @@ header a:hover {
 }
 
 .tickets {
-  color: white !important;
+  color: #f2f0ed !important;
   background: black;
 }
 
@@ -152,4 +190,16 @@ button {
 
 button:focus {
   outline: 0;
+}
+
+#info-details,
+#ticket-details,
+#location-details {
+  padding: 75px 0 0 0;
+}
+
+.art-splash {
+  margin-top: 200px;
+  /*opacity: 1;
+  transition: opacity 8s;*/
 }
