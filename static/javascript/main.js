@@ -1,3 +1,14 @@
+$('.art-logo-fete').hide();
+$('.art-logo-photo').hide();
+$('.art-logo-harriett').hide();
+
+$(window).on('load', function(){
+  $('.stacked-logo').fadeOut(2000);
+  $('.art-logo-fete').delay(2000).fadeIn(2000);
+  $('.art-logo-harriett').delay(4000).fadeIn(2000);
+  $('.art-logo-photo').delay(6000).fadeIn(2000);
+});
+
 $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
