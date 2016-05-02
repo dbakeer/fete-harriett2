@@ -138,6 +138,29 @@ nav {
   padding: 75px 0 0 0;
 }
 
-.hidden {
-  transition: color 0.7s;
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  * {
+    font-size: 14px;
+  }
+  header {
+    display: none;
+  }
+  iframe {
+    height: 400px;
+  }
+  button {
+    margin-bottom: 10px;
+  }
+  .art-logo-fete {
+    margin: 0 0 0 0;
+    width: 50vw;
+  }
+  .art-logo-photo {
+    margin: 4vh 0 0 15vw;
+    width: 75vw;
+  }
+  .art-logo-harriett {
+    margin: 25vh 0 0 25vw;
+    width: 75vw;
+  }
 }
