@@ -11,9 +11,6 @@ body {
   font-family: TradeGothic;
 }
 
-
-
-
 /* HEADER */
 header {
   font-size: 22px;
@@ -75,12 +72,14 @@ nav {
 .stacked-logo {
   margin: auto;
   display: block;
+  margin-top: 25vh;
 }
 
 .art-splash {
-  height: 100vh;
   padding: 25vh 0;
   width: 50vw;
+  z-index: 4;
+  margin-bottom: 50vh;
 }
 
 .art-logo-fete {
@@ -98,7 +97,7 @@ nav {
 .art-logo-harriett {
   z-index: 3;
   position: absolute;
-  margin: 25vh 0 0 40vh;
+  margin: 25vh 0 0 40vw;
 }
 
 
@@ -113,40 +112,6 @@ nav {
   z-index: -3;
   position: relative;
   width: 90vw;
-}
-
-.host-img {
-  position: absolute;
-}
-
-.sophie {
-  margin: 20vh 0 0 8vw;
-  width: 17vw;
-}
-
-.roanne {
-  margin: 25vh 0 0 -12vw;
-  width: 13vw;
-}
-
-.lykke1 {
-  margin: 35vh 0 0 24vw;
-  width: 13vw;
-}
-
-.lykke2 {
-  margin: 45vh 0 0 -29vw;
-  width: 30vw;
-}
-
-.maggie {
-  margin: 0 0 0 33vw;
-  width: 8vw;
-}
-
-.lena {
-  margin: 0 0 0 -30vw;
-  width: 10vw;
 }
 
 .host {
@@ -164,44 +129,6 @@ nav {
 .sponsored-by {
   margin-top: 50px;
 }
-
-
-
-/**/
-
-/* MOBILE STYLING*/
-/*@media screen and (max-width: 800px) {
-  .stacked-logo {
-    width: 100vw;
-    padding: 0 0 0 0 !important;
-  }
-  /*.art-logo-fete {
-    z-index: 3;
-    width: 250px;
-    margin: 25px 0 0 -200px !important;
-  }
-  .art-logo-harriett {
-    width: 300px;
-    margin: 300px 0 0 -100px !important;
-  }
-  .art-logo-photo {
-    width: 400px;
-    margin: 100px 0 0 -200px !important;
-  }*/
-  /*.section {
-    font-size: 14px;
-    padding: 0 0 0 0 !important;
-  }
-  #menu {
-    display: none;
-  }
-  .host-img {
-    display: none;
-  }
-  .lips {
-    opacity: 0 !important;
-  }
-}*/
 
 button {
   background: transparent;

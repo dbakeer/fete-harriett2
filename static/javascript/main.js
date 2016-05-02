@@ -1,12 +1,14 @@
 $('.art-logo-fete').hide();
 $('.art-logo-photo').hide();
 $('.art-logo-harriett').hide();
+$('html').hide();
 
 $(window).on('load', function(){
-  $('.stacked-logo').fadeOut(2000);
-  $('.art-logo-fete').delay(2000).fadeIn(2000);
-  $('.art-logo-harriett').delay(4000).fadeIn(2000);
-  $('.art-logo-photo').delay(6000).fadeIn(2000);
+  $('html').fadeIn(2000);
+  $('.stacked-logo').delay(2000).fadeOut(3000);
+  $('.art-logo-fete').delay(5000).fadeIn(2000);
+  $('.art-logo-harriett').delay(7000).fadeIn(2000);
+  $('.art-logo-photo').delay(9000).fadeIn(2000);
 });
 
 $(document).ready(function() {
@@ -21,43 +23,34 @@ $(document).ready(function() {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
         $('.hidden').css('color', '#f2f0ed');
-        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 5 && direction == 'up') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
         $('.hidden').css('color', '#f2f0ed');
-        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 1 && nextIndex == 4 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
         $('.hidden').css('color', '#f2f0ed');
-        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 2 && nextIndex == 4 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
         $('.hidden').css('color', '#f2f0ed');
-        $('#lip-reveal').css('fill', '#f2f0ed');
       } else if (index == 6 && nextIndex == 4 && direction == 'up') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
         $('.hidden').css('color', '#f2f0ed');
-        $('#lip-reveal').css('fill', '#f2f0ed');
       } else {
         $('header a').css('color', 'black');
         $('header li').css('color', 'black');
         $('.hidden').css('color', 'black');
-        $('#lip-reveal').css('fill', 'black');
       }
     },
     afterLoad: function(anchorLink, index){
       if(index == 1){
         $('header').css('opacity', '0');
-        $('.lips').css('opacity', '0');
         $('header').css('transition', 'opacity 0.1s');
-        $('.lips').css('transition', 'opacity 0.1s');
       } else {
         $('header').css('opacity', '1');
-        $('.lips').css('opacity', '1');
       }
     }
   });
