@@ -11,7 +11,19 @@ body {
   font-family: TradeGothic;
 }
 
-/* HEADER */
+button {
+  background: transparent;
+  font-family: TradeGothic;
+  height: 30px;
+  width: 200px;
+  border: 1px black solid;
+  padding: 15px 0 0 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
 header {
   font-size: 22px;
   line-height: 36px;
@@ -41,31 +53,12 @@ nav {
   text-decoration: underline;
 }
 
-.lips {
-  transition: opacity 0.7s;
-  position: absolute;
-  z-index: 20;
-  width: 89%;
-  margin: 15px 0 0 10%;
-  text-align: right;
-}
-
-/*.lips img {
-  float: right;
-}*/
-
-.hidden {
-  font-size: 22px;
-}
-
 
 /* FULLPAGE STUFF */
 .section {
   font-size: 22px;
   text-align: center;
 }
-
-
 
 
 /* SPLASH PAGE */
@@ -101,23 +94,7 @@ nav {
 }
 
 
-
-
 /*  HOST PAGE */
-.host-img {
-  z-index: -1;
-}
-
-.host-images {
-  z-index: -3;
-  position: relative;
-  width: 90vw;
-}
-
-.host {
-  display: table;
-}
-
 .hosted-header {
   margin-bottom: 50px;
 }
@@ -129,20 +106,6 @@ nav {
 .sponsored-by {
   margin-top: 50px;
 }
-
-button {
-  background: transparent;
-  font-family: TradeGothic;
-  height: 30px;
-  width: 200px;
-  border: 1px black solid;
-  padding: 15px 0 0 0;
-}
-
-button:focus {
-  outline: 0;
-}
-
 
 .contact,
 .tickets {
