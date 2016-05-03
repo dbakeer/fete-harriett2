@@ -12,7 +12,6 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function() {
-  if(screen.width > 480) {
   $('#fullpage').fullpage({
     anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
     menu: '#menu',
@@ -49,7 +48,6 @@ $(document).ready(function() {
       }
     }
   });
-  }
 });
 
 jQuery('img.svg').each(function(){

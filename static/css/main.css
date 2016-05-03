@@ -1,7 +1,14 @@
 /* GENERAL */
 @font-face {
-    font-family: TradeGothic;
-    src: url(../fonts/trade_gothic.ttf);
+    font-family: 'TradeGothic';
+    src: url('/static/fonts/trade_gothic.eot');
+    src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/trade_gothic.woff2') format('woff2'),
+         url('/static/fonts/trade_gothic.woff') format('woff'),
+         url('/static/fonts/trade_gothic.ttf') format('truetype'),
+         url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -17,7 +24,6 @@ button {
   height: 30px;
   width: 200px;
   border: 1px black solid;
-  padding: 15px 0 0 0;
 }
 
 button:focus {
@@ -47,6 +53,10 @@ header a:hover {
 
 nav {
   line-height: 36px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .active a {
@@ -94,25 +104,34 @@ nav {
 }
 
 
-/*  HOST PAGE */
-.hosted-header {
-  margin-bottom: 50px;
-}
-
+/*  HOST SECTION */
 .special-performance {
   margin-top: 50px;
 }
 
+/* INFO SECTION */
 .sponsored-by {
   margin-top: 50px;
 }
 
+/* TICKET SECTION */
 .contact,
 .tickets {
   background: black;
   color: #f2f0ed;
 }
 
+/* LOCATION SECTION */
+#map {
+  height: 600px;
+  margin: 0 27% 75px;
+}
+
+#location-details {
+  padding: 75px 0 0 0;
+}
+
+/* CONTACT SECTION */
 .contact-content {
   padding: 75px 0 50px 0;
   text-align: center;
@@ -124,20 +143,7 @@ nav {
   height: auto;
 }
 
-#lip-reveal {
-  fill: black;
-  transition: fill 0.7s;
-}
-
-#map {
-  height: 600px;
-  margin: 0 27% 75px;
-}
-
-#location-details {
-  padding: 75px 0 0 0;
-}
-
+/* MOBILE STYLING */
 @media screen and (min-width: 200px) and (max-width: 800px) {
   * {
     font-size: 14px;
