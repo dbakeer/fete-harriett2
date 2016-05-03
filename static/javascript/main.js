@@ -5,6 +5,7 @@ $('html').hide();
 
 $(window).on('load', function(){
   $('html').fadeIn(2000);
+  $('body').removeClass('loading');
   $('.stacked-logo').delay(2000).fadeOut(3000);
   $('.art-logo-fete').delay(5000).fadeIn(2000);
   $('.art-logo-harriett').delay(7000).fadeIn(2000);
