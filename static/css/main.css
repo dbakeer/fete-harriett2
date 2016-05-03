@@ -35,6 +35,10 @@ button:focus {
   outline: 0;
 }
 
+#ticket-button {
+  border: 1px #f2f0ed solid;
+}
+
 header {
   font-size: 22px;
   line-height: 36px;
@@ -71,7 +75,7 @@ ul {
 
 /* FULLPAGE STUFF */
 .section {
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -84,8 +88,6 @@ ul {
 }
 
 .art-splash {
-  padding: 25vh 0;
-  width: 50vw;
   z-index: 4;
   margin-bottom: 50vh;
 }
