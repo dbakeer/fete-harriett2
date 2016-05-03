@@ -90,16 +90,17 @@ ul {
 .art-splash {
   z-index: 4;
   margin-bottom: 50vh;
+  width: 50vw;
 }
 
 .art-logo-fete {
   z-index: 3;
   position: absolute;
-  margin: 0 0 0 20vw;
+  margin: 0 0 0 25vw;
 }
 
 .art-logo-photo {
-  margin: 4vh 0 0 30vw;
+  margin: 4vh 0 0 35vw;
   position: absolute;
   z-index: -1;
 }
@@ -107,7 +108,8 @@ ul {
 .art-logo-harriett {
   z-index: 3;
   position: absolute;
-  margin: 25vh 0 0 40vw;
+
+    margin: 30vh 45vw 0;
 }
 
 
@@ -151,7 +153,14 @@ ul {
 }
 
 /* MOBILE STYLING */
-@media screen and (min-width: 200px) and (max-width: 800px) {
+/*@media screen and (min-width: 200px) and (max-width: 800px) and (orientation: landscape) {
+  .section {
+    padding-left: 20%;
+    font-size: 14px;
+  }
+}*/
+
+@media screen and (min-width: 375px) and (max-width: 800px) and (orientation: portrait) {
   * {
     font-size: 14px;
   }
@@ -172,5 +181,87 @@ ul {
   .art-logo-harriett {
     margin: 25vh 0 0 25vw;
     width: 75vw;
+  }
+  header {
+    width:100vh;
+    height:45px;
+    position:fixed;
+    -webkit-transform-origin: left top;
+    -webkit-transform:rotate(-90deg) translateX(-100%);
+  }
+  ul.nav {
+    margin:0 auto;
+    height:100%;
+  }
+  ul.nav li {
+    margin-right:20px;
+    float:right;
+    height:100%;
+    line-height:45px;
+  }
+  .hosts,
+  .info,
+  .tickets,
+  .location {
+    padding: 0 10px 0 45px;
+  }
+  .contact-content {
+    padding: 50px 0 25px 0;
+  }
+  .stacked-logo {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 374px) and (orientation: portrait) {
+  * {
+    font-size: 12px;
+  }
+  iframe {
+    height: 400px;
+  }
+  button {
+    margin-bottom: 10px;
+  }
+  .art-logo-fete {
+    margin: 0 0 0 0;
+    width: 50vw;
+  }
+  .art-logo-photo {
+    margin: 4vh 0 0 15vw;
+    width: 75vw;
+  }
+  .art-logo-harriett {
+    margin: 25vh 0 0 25vw;
+    width: 75vw;
+  }
+  header {
+    width:100vh;
+    height:45px;
+    position:fixed;
+    -webkit-transform-origin: left top;
+    -webkit-transform:rotate(-90deg) translateX(-100%);
+  }
+  ul.nav {
+    margin:0 auto;
+    height:100%;
+  }
+  ul.nav li {
+    margin-right:20px;
+    float:right;
+    height:100%;
+    line-height:45px;
+  }
+  .hosts,
+  .info,
+  .tickets,
+  .location {
+    padding: 0 10px 0 45px;
+  }
+  .contact-content {
+    padding: 25px 0 0 0;
+  }
+  .stacked-logo {
+    width: 50vw;
   }
 }

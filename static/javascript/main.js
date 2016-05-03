@@ -13,6 +13,45 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function() {
+  if(screen.width < 480) {
+    $('#fullpage').fullpage({
+      anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
+      menu: '#menu',
+      css3:true,
+      fitToSection: true,
+      resize: true,
+      scrollOverflow: true,
+      onLeave: function(index, nextIndex, direction) {
+        if (index == 3 && direction == 'down') {
+          $('header a').css('color', '#f2f0ed');
+          $('header li').css('color', '#f2f0ed');
+        } else if (index == 5 && direction == 'up') {
+          $('header a').css('color', '#f2f0ed');
+          $('header li').css('color', '#f2f0ed');
+        } else if (index == 1 && nextIndex == 4 && direction == 'down') {
+          $('header a').css('color', '#f2f0ed');
+          $('header li').css('color', '#f2f0ed');
+        } else if (index == 2 && nextIndex == 4 && direction == 'down') {
+          $('header a').css('color', '#f2f0ed');
+          $('header li').css('color', '#f2f0ed');
+        } else if (index == 6 && nextIndex == 4 && direction == 'up') {
+          $('header a').css('color', '#f2f0ed');
+          $('header li').css('color', '#f2f0ed');
+        } else {
+          $('header a').css('color', 'black');
+          $('header li').css('color', 'black');
+        }
+      },
+      afterLoad: function(anchorLink, index){
+        if(index == 1){
+          $('header').css('opacity', '0');
+          $('header').css('transition', 'opacity 0.1s');
+        } else {
+          $('header').css('opacity', '1');
+        }
+      }
+    });
+  } else {
   $('#fullpage').fullpage({
     anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
     menu: '#menu',
@@ -49,6 +88,7 @@ $(document).ready(function() {
       }
     }
   });
+  }
 });
 
 jQuery('img.svg').each(function(){
