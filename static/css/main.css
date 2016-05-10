@@ -117,6 +117,7 @@ ul {
 .stacked-logo {
   margin: auto;
   display: block;
+  width: 50%;
 }
 
 .art-splash {
@@ -128,7 +129,7 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(45%, 12%);
+  transform: translate(45%, -9%);
   width: 35%;
   height: 50%;
 }
@@ -136,7 +137,7 @@ ul {
 .art-logo-photo {
   position: static;
   z-index: -1;
-  widows: 50%;
+  width: 50%;
 }
 
 .art-logo-harriett {
@@ -144,7 +145,7 @@ ul {
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(-25%, -15%);
+  transform: translate(-25%, 13%);
   width: 45%;
   height: 50%;
 }
@@ -164,12 +165,17 @@ ul {
   margin-top: 50px;
 }
 
-.sponsors {
+.desktop-sponsors {
   margin-top: 175px;
+  display: block;
 }
 
-.sponsors img {
+.desktop-sponsors img {
   width: 90%;
+}
+
+.mobile-sponsors {
+  display: none;
 }
 
 /* TICKET SECTION */
@@ -292,6 +298,57 @@ ul {
   .art-logo-photo {
     width: 74vw;
   }
+  .mobile-sponsors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mobile-sponsors img {
+    margin: 0 0 30px 0;
+  }
+  .desktop-sponsors {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  header {
+    font-size: 18px;
+  }
+  .hosts,
+  .info,
+  .tickets,
+  .location {
+    padding: 0 0 0 150px;
+  }
+  .mobile-sponsors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mobile-sponsors img {
+    margin: 0 0 30px 0;
+  }
+  .desktop-sponsors {
+    display: none;
+  }
+  iframe {
+    width: 75%;
+  }
+  #location-details {
+    display: flex;
+  }
+  .contact-address,
+  .contact-link {
+    font-size: 14px;
+  }
+  #contact-logo {
+    width: 100px;
+    height: auto;
+  }
+  .contact-content {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 200px) and (max-width: 374px) and (orientation: portrait) {
@@ -351,5 +408,16 @@ ul {
   }
   #contact-logo {
     width: 100px;
+  }
+  .mobile-sponsors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mobile-sponsors img {
+    margin: 0 0 30px 0;
+  }
+  .desktop-sponsors {
+    display: none;
   }
 }
