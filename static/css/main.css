@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #f2f0ed;
+  background-color: #f2e5ca;
   margin: 0 10px;
   text-transform: uppercase;
   font-family: TradeGothic;
@@ -100,33 +100,36 @@ ul {
 .stacked-logo {
   margin: auto;
   display: block;
-  margin-top: 25vh;
 }
 
 .art-splash {
   z-index: 4;
-  margin-bottom: 50vh;
-  width: 50vw;
-  margin-left: 10vw;
 }
 
 .art-logo-fete {
   z-index: 3;
   position: absolute;
-  margin: 0 0 0 15vw;
+  top: 0;
+  left: 0;
+  transform: translate(45%, 12%);
+  width: 35%;
+  height: 50%;
 }
 
 .art-logo-photo {
-  margin: 4vh 0 0 25vw;
-  position: absolute;
+  position: static;
   z-index: -1;
+  widows: 50%;
 }
 
 .art-logo-harriett {
   z-index: 3;
   position: absolute;
-
-    margin: 30vh 35vw 0;
+  bottom: 0;
+  right: 0;
+  transform: translate(-25%, -15%);
+  width: 45%;
+  height: 50%;
 }
 
 
@@ -179,7 +182,7 @@ ul {
 }
 
 .contact-link a:hover {
-  color: #808080 !important;
+  color: #f2e5ca !important;
   text-decoration: underline !important;
 }
 
