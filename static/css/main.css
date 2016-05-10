@@ -29,10 +29,17 @@ button {
   height: 30px;
   width: 200px;
   border: 1px black solid;
+  -webkit-transition: color .7s, background .7s;
 }
 
 button:focus {
   outline: 0;
+}
+
+button:hover {
+  color: #f2f0ed;
+  background: black;
+  border: 1px #f2f0ed solid;
 }
 
 #ticket-button {
@@ -147,19 +154,22 @@ ul {
 }
 
 #contact-logo {
-  fill: white;
   width: 200px;
   height: auto;
 }
 
-/* MOBILE STYLING */
-/*@media screen and (min-width: 200px) and (max-width: 800px) and (orientation: landscape) {
-  .section {
-    padding-left: 20%;
-    font-size: 14px;
-  }
-}*/
+.contact-link a {
+  color: white !important;
+  text-decoration: none !important;
+  -webkit-transition: color .7s, text-decoration .7s;
+}
 
+.contact-link a:hover {
+  color: #808080 !important;
+  text-decoration: underline !important;
+}
+
+/* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 800px) and (orientation: portrait) {
   * {
     font-size: 14px;
@@ -218,7 +228,8 @@ ul {
     font-size: 12px;
   }
   iframe {
-    height: 400px;
+    height: 50vw;
+    width: 50vw;
   }
   button {
     margin-bottom: 10px;
