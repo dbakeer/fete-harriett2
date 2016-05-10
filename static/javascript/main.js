@@ -58,6 +58,7 @@ $(document).ready(function() {
     css3:true,
     fitToSection: true,
     resize: true,
+    scrollOverflow: true,
     onLeave: function(index, nextIndex, direction) {
       if (index == 3 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');

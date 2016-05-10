@@ -1,14 +1,14 @@
 /* GENERAL */
 @font-face {
-    font-family: 'TradeGothic';
-    src: url('/static/fonts/trade_gothic.eot');
-    src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/trade_gothic.woff2') format('woff2'),
-         url('/static/fonts/trade_gothic.woff') format('woff'),
-         url('/static/fonts/trade_gothic.ttf') format('truetype'),
-         url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TradeGothic';
+  src: url('/static/fonts/trade_gothic.eot');
+  src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/trade_gothic.woff2') format('woff2'),
+       url('/static/fonts/trade_gothic.woff') format('woff'),
+       url('/static/fonts/trade_gothic.ttf') format('truetype'),
+       url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
   text-transform: uppercase;
   font-family: TradeGothic;
   display: block;
+  font-size: 22px;
 }
 
 body .loading {
@@ -26,7 +27,7 @@ body .loading {
 button {
   background: transparent;
   font-family: TradeGothic;
-  height: 30px;
+  height: 40px;
   width: 200px;
   border: 1px black solid;
   -webkit-transition: color .7s, background .7s;
@@ -44,7 +45,7 @@ button:hover {
 
 #ticket-button {
   margin-top: 50px;
-  border: 1px #f2f0ed solid;
+  border: 1px white solid;
   color: #f2f0ed;
   background: black;
   -webkit-transition: color .7s, background .7s;
@@ -88,10 +89,26 @@ ul {
   text-decoration: underline;
 }
 
+.hosts-info{
+  padding: 0;
+}
+.hosted-by {
+  padding: 0;
+}
+.special-performance {
+  padding: 0;
+}
+#info-details {
+  padding: 0;
+}
+#ticket-details {
+  padding: 0;
+}
+
 
 /* FULLPAGE STUFF */
 .section {
-  font-size: 18px;
+  font-size: 22px;
   text-align: center;
 }
 
@@ -139,8 +156,20 @@ ul {
 }
 
 /* INFO SECTION */
+.austere {
+  margin-top: 50px;
+}
+
 .sponsored-by {
   margin-top: 50px;
+}
+
+.sponsors {
+  margin-top: 175px;
+}
+
+.sponsors img {
+  width: 90%;
 }
 
 /* TICKET SECTION */
@@ -166,13 +195,22 @@ ul {
 
 /* CONTACT SECTION */
 .contact-content {
-  padding: 75px 0 50px 0;
+  padding: 35px 0;
   text-align: center;
 }
 
 #contact-logo {
   width: 200px;
   height: auto;
+}
+
+.contact-address {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.contact-link {
+  margin-top: 0;
 }
 
 .contact-link a {
@@ -186,13 +224,18 @@ ul {
   text-decoration: underline !important;
 }
 
+.social {
+  margin: 0 25px;
+}
+
 /* MOBILE STYLING */
-@media screen and (min-width: 375px) and (max-width: 800px) and (orientation: portrait) {
+@media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
   * {
     font-size: 14px;
   }
   iframe {
     height: 400px;
+    width: 60vw;
   }
   button {
     margin-bottom: 10px;
@@ -201,12 +244,7 @@ ul {
     margin: 0 0 0 0;
     width: 50vw;
   }
-  .art-logo-photo {
-    margin: 4vh 0 0 15vw;
-    width: 75vw;
-  }
   .art-logo-harriett {
-    margin: 25vh 0 0 25vw;
     width: 75vw;
   }
   header {
@@ -239,30 +277,33 @@ ul {
   .stacked-logo {
     width: 50vw;
   }
+  #location-details {
+    padding: 20px 0 0 0;
+  }
+  .art-logo-fete {
+    transform: translate(4%, 10%);
+  }
+  .art-logo-harriett {
+    transform: translate(0, -14%);
+  }
+  .social {
+    margin-bottom: 10px !important;
+  }
+  .art-logo-photo {
+    width: 74vw;
+  }
 }
 
 @media screen and (min-width: 200px) and (max-width: 374px) and (orientation: portrait) {
   * {
-    font-size: 12px;
+    font-size: 14px;
   }
   iframe {
-    height: 50vw;
-    width: 50vw;
+    height: 90vw;
+    width: 75vw;
   }
   button {
     margin-bottom: 10px;
-  }
-  .art-logo-fete {
-    margin: 0 0 0 0;
-    width: 50vw;
-  }
-  .art-logo-photo {
-    margin: 4vh 0 0 15vw;
-    width: 75vw;
-  }
-  .art-logo-harriett {
-    margin: 25vh 0 0 25vw;
-    width: 75vw;
   }
   header {
     width:100vh;
@@ -290,7 +331,25 @@ ul {
   .contact-content {
     padding: 25px 0 0 0;
   }
+  #location-details {
+    padding: 20px 0 0 0;
+  }
+  .art-logo-fete {
+    transform: translate(4%, 10%);
+  }
+  .art-logo-harriett {
+    transform: translate(0, -14%);
+  }
+  .art-logo-photo {
+    width: 74vw;
+  }
   .stacked-logo {
     width: 50vw;
+  }
+  .social {
+    margin-bottom: 10px !important;
+  }
+  #contact-logo {
+    width: 100px;
   }
 }
