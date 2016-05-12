@@ -1,18 +1,11 @@
-// This is your main LESS file. It imports the source boostrap files.
-
 /* GENERAL */
 @font-face {
   font-family: 'TradeGothic';
   src: url('/static/fonts/trade_gothic.eot');
-  src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'),
-       url('/static/fonts/trade_gothic.woff2') format('woff2'),
-       url('/static/fonts/trade_gothic.woff') format('woff'),
-       url('/static/fonts/trade_gothic.ttf') format('truetype'),
-       url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
+  src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'), url('/static/fonts/trade_gothic.woff2') format('woff2'), url('/static/fonts/trade_gothic.woff') format('woff'), url('/static/fonts/trade_gothic.ttf') format('truetype'), url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-
 body {
   background-color: #f2e5ca;
   margin: 0 10px;
@@ -21,11 +14,6 @@ body {
   display: block;
   font-size: 22px;
 }
-
-// body .loading {
-//   display: none;
-// }
-
 .button,
 button {
   display: inline-block;
@@ -42,11 +30,9 @@ button {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 button:focus {
   outline: 0;
 }
-
 .button:hover,
 button:hover {
   color: #f2f0ed;
@@ -54,19 +40,16 @@ button:hover {
   border: 1px #f2f0ed solid;
   transition-duration: 350ms;
 }
-
 #ticket-button {
   margin-top: 50px;
   border: 1px white solid;
   color: #f2f0ed;
   background: black;
 }
-
 #ticket-button:hover {
   color: black;
   background: #f2f0ed;
 }
-
 header {
   font-size: 14px !important;
   line-height: 36px;
@@ -76,32 +59,25 @@ header {
   font-size: 22px;
   width: 20%;
 }
-
 header a {
   color: black;
   text-decoration: none;
   display: inline-block;
   transition: color 0.7s;
 }
-
 header a:hover {
   text-decoration: underline;
 }
-
 nav {
   line-height: 36px;
 }
-
 ul {
   list-style-type: none;
 }
-
-
 .hosts {
   padding-top: 75px;
 }
-
-.hosts-info{
+.hosts-info {
   padding: 0;
 }
 .hosted-by {
@@ -116,15 +92,11 @@ ul {
 #ticket-details {
   padding: 0;
 }
-
-
 /* FULLPAGE STUFF */
 .section {
   font-size: 22px;
   text-align: center;
 }
-
-
 /* SPLASH PAGE */
 .art-splash {
   z-index: 4;
@@ -132,7 +104,6 @@ ul {
   margin: auto;
   width: 40%;
 }
-
 .art-logo-fete {
   position: absolute;
   top: 0;
@@ -141,14 +112,12 @@ ul {
   height: 50%;
   z-index: 1;
 }
-
 .art-logo-photo {
   display: block;
   margin: auto;
   width: 100%;
   z-index: 0;
 }
-
 .art-logo-harriett {
   position: absolute;
   bottom: 0;
@@ -157,108 +126,86 @@ ul {
   height: 50%;
   z-index: 1;
 }
-
-
 /*  HOST SECTION */
 .special-performance {
   margin-top: 50px;
 }
-
 /* INFO SECTION */
 .austere {
   margin-top: 50px;
 }
-
 .sponsored-by {
   margin-top: 50px;
 }
-
 .desktop-sponsors {
   margin-top: 100px;
   display: block;
 }
-
 .desktop-sponsors img {
   width: 90%;
 }
-
 .mobile-sponsors {
   display: none;
 }
-
 /* TICKET SECTION */
 .contact,
 .tickets {
   background: black;
   color: #f2f0ed;
 }
-
 .eventbrite {
   margin-top: 50px;
 }
-
 /* LOCATION SECTION */
 #map {
   height: 600px;
   margin: 0 27% 75px;
 }
-
 #location-details {
   padding: 50px 0 0 0;
 }
-
 /* CONTACT SECTION */
 .contact-content {
   padding: 35px 0;
   text-align: center;
 }
-
 #contact-logo {
   width: 200px;
   height: auto;
 }
-
 .contact-address {
   margin-top: 20px;
   margin-bottom: 0;
 }
-
 .contact-link {
   margin-top: 0;
 }
-
 .contact-link a {
   color: white !important;
   text-decoration: none !important;
-  -webkit-transition: color .7s, text-decoration .7s;
+  -webkit-transition: color 0.7s, text-decoration 0.7s;
 }
-
 .contact-link a:hover {
   color: #f2e5ca !important;
   text-decoration: underline !important;
 }
-
 .social {
   margin: 0 25px;
 }
-
 a.social {
   color: black !important;
   text-decoration: none !important;
   transition-property: color, background-color;
   transition-duration: 700ms;
 }
-
 a.social:hover {
   background: black;
   color: #f2e5ca !important;
   transition-duration: 350ms;
 }
-
 .contact {
   font-size: 14px !important;
 }
-
 /* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
   * {
@@ -279,22 +226,22 @@ a.social:hover {
     width: 75vw;
   }
   header {
-    width:100vh;
-    height:45px;
-    position:fixed;
+    width: 100vh;
+    height: 45px;
+    position: fixed;
     -webkit-transform-origin: left top;
-    -webkit-transform:rotate(-90deg) translateX(-100%);
+    -webkit-transform: rotate(-90deg) translateX(-100%);
   }
   ul.nav {
-    margin:0 auto;
-    height:100%;
+    margin: 0 auto;
+    height: 100%;
     font-size: 12px !important;
   }
   ul.nav li {
-    margin-right:20px;
-    float:right;
-    height:100%;
-    line-height:45px;
+    margin-right: 20px;
+    float: right;
+    height: 100%;
+    line-height: 45px;
   }
   .hosts,
   .info,
@@ -341,7 +288,6 @@ a.social:hover {
     padding-bottom: 25px;
   }
 }
-
 @media screen and (max-width: 800px) and (orientation: landscape) {
   header {
     font-size: 14px;
@@ -381,7 +327,6 @@ a.social:hover {
     padding: 0;
   }
 }
-
 @media screen and (min-width: 200px) and (max-width: 374px) and (orientation: portrait) {
   * {
     font-size: 14px;
@@ -394,21 +339,21 @@ a.social:hover {
     margin-bottom: 10px;
   }
   header {
-    width:100vh;
-    height:45px;
-    position:fixed;
+    width: 100vh;
+    height: 45px;
+    position: fixed;
     -webkit-transform-origin: left top;
-    -webkit-transform:rotate(-90deg) translateX(-100%);
+    -webkit-transform: rotate(-90deg) translateX(-100%);
   }
   ul.nav {
-    margin:0 auto;
-    height:100%;
+    margin: 0 auto;
+    height: 100%;
   }
   ul.nav li {
-    margin-right:20px;
-    float:right;
-    height:100%;
-    line-height:45px;
+    margin-right: 20px;
+    float: right;
+    height: 100%;
+    line-height: 45px;
   }
   .hosts,
   .info,
