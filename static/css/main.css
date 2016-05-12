@@ -31,6 +31,7 @@ button {
   width: 200px;
   border: 1px black solid;
   -webkit-transition: color .7s, background .7s;
+  font-size: 14px;
 }
 
 button:focus {
@@ -57,7 +58,7 @@ button:hover {
 }
 
 header {
-  font-size: 22px;
+  font-size: 14px !important;
   line-height: 36px;
   z-index: 5;
   position: absolute;
@@ -89,6 +90,10 @@ ul {
   text-decoration: underline;
 }
 
+.hosts {
+  padding-top: 75px;
+}
+
 .hosts-info{
   padding: 0;
 }
@@ -114,12 +119,6 @@ ul {
 
 
 /* SPLASH PAGE */
-.stacked-logo {
-  margin: auto;
-  display: block;
-  width: 50%;
-}
-
 .art-splash {
   z-index: 4;
 }
@@ -129,15 +128,15 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(45%, -9%);
-  width: 35%;
+  transform: translate(45%, 5%);
+  width: 25%;
   height: 50%;
 }
 
 .art-logo-photo {
   position: static;
   z-index: -1;
-  width: 50%;
+  width: 40%;
 }
 
 .art-logo-harriett {
@@ -145,8 +144,8 @@ ul {
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(-25%, 13%);
-  width: 45%;
+  transform: translate(-25%, 7%);
+  width: 35%;
   height: 50%;
 }
 
@@ -166,7 +165,7 @@ ul {
 }
 
 .desktop-sponsors {
-  margin-top: 175px;
+  margin-top: 100px;
   display: block;
 }
 
@@ -196,7 +195,7 @@ ul {
 }
 
 #location-details {
-  padding: 75px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 /* CONTACT SECTION */
@@ -232,6 +231,21 @@ ul {
 
 .social {
   margin: 0 25px;
+}
+
+.social a {
+  color: black !important;
+  text-decoration: none !important;
+  -webkit-transition: color .7s, text-decoration .7s;
+}
+
+.social a:hover {
+  color: #f2e5ca !important;
+  text-decoration: underline !important;
+}
+
+.contact {
+  font-size: 14px !important;
 }
 
 /* MOBILE STYLING */
@@ -278,13 +292,13 @@ ul {
     padding: 0 10px 0 45px;
   }
   .contact-content {
-    padding: 50px 0 25px 0;
+    padding: 10px 0;
   }
   .stacked-logo {
     width: 50vw;
   }
   #location-details {
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
   }
   .art-logo-fete {
     transform: translate(4%, 10%);
@@ -309,11 +323,17 @@ ul {
   .desktop-sponsors {
     display: none;
   }
+  #contact-logo {
+    width: 100px;
+  }
+  .location {
+    padding-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
   header {
-    font-size: 18px;
+    font-size: 14px;
   }
   .hosts,
   .info,
@@ -343,7 +363,7 @@ ul {
     font-size: 14px;
   }
   #contact-logo {
-    width: 100px;
+    width: 100px !important;
     height: auto;
   }
   .contact-content {
@@ -407,7 +427,7 @@ ul {
     margin-bottom: 10px !important;
   }
   #contact-logo {
-    width: 100px;
+    width: 50px;
   }
   .mobile-sponsors {
     display: flex;
