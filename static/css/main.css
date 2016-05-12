@@ -24,8 +24,9 @@ body .loading {
   display: none;
 }
 
+.button,
 button {
-  background: transparent;
+  display: inline-block;
   font-family: TradeGothic;
   height: 40px;
   width: 200px;

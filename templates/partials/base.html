@@ -36,21 +36,21 @@
     {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
     <!-- build:css /static/css/minified.css -->
-    <link rel="stylesheet" href="/static/css/main.css"/>
+    <link rel="stylesheet" href="/static/css/app.css">
     <!-- endbuild -->
 
-    <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
-    <link rel="stylesheet" href="/static/css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="/static/css/wysiwyg_figures.css">
+    <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
     {# Useful block for loading outside scripts in other pages. #}
     {% block head_extra %}{% endblock %}
 
-    <meta property="og:url" content="http://www.feteharriett.com" />
-    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
-    <meta property="og:description" content="Fete Harriett" />
-    <meta property="og:image" content="../../images/logo_stacked.svg" />
+    <meta property="og:url" content="http://www.feteharriett.com">
+    <meta property="og:title" content="When Great Minds Don’t Think Alike">
+    <meta property="og:description" content="Fete Harriett">
+    <meta property="og:image" content="../../images/logo_stacked.svg">
   </head>
   <body {% block body_attributes %}{% endblock %} class="loading">
     {% block body %}

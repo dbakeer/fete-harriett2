@@ -1,10 +1,10 @@
-$('.art-logo-fete').hide();
+// $('.art-logo-fete').hide();
 $('.art-logo-photo').hide();
-$('.art-logo-harriett').hide();
-$('html').hide();
+// $('.art-logo-harriett').hide();
+// $('html').hide();
 
-$(window).on('load', function(){
-  $('html').fadeIn(2000);
+$(document).on('ready', function(){
+  // $('html').fadeIn(2000);
   $('body').removeClass('loading');
   $('.art-logo-fete').fadeIn(2000);
   $('.art-logo-harriett').delay(2000).fadeIn(2000);
