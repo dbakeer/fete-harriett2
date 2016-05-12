@@ -1,5 +1,9 @@
 // This is your main LESS file. It imports the source boostrap files.
 
+tablet_portrait = "(min-width: 768px)"
+
+@import "partials/header";
+
 /* GENERAL */
 @font-face {
   font-family: 'TradeGothic';
@@ -20,11 +24,12 @@ body {
   font-family: TradeGothic;
   display: block;
   font-size: 22px;
+  transition: opacity 750ms;
+  &.loading {
+    opacity: 0;
+  }
 }
 
-// body .loading {
-//   display: none;
-// }
 
 .button,
 button {
@@ -67,34 +72,7 @@ button:hover {
   background: #f2f0ed;
 }
 
-header {
-  font-size: 14px !important;
-  line-height: 36px;
-  z-index: 5;
-  position: absolute;
-  transition: color 0.7s;
-  font-size: 22px;
-  width: 20%;
-}
 
-header a {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  transition: color 0.7s;
-}
-
-header a:hover {
-  text-decoration: underline;
-}
-
-nav {
-  line-height: 36px;
-}
-
-ul {
-  list-style-type: none;
-}
 
 
 .hosts {
@@ -105,6 +83,9 @@ ul {
   padding: 0;
 }
 .hosted-by {
+  column-width: 160px;
+  margin: auto;
+  max-width: 1000px;
   padding: 0;
 }
 .special-performance {
@@ -165,26 +146,24 @@ ul {
 }
 
 /* INFO SECTION */
-.austere {
-  margin-top: 50px;
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em 0;
+  img {
+    margin: 1em;
+  }
+
+  .buhai { height: .9em }
+  .austere { height: 1.3em }
+  .yola { height: 2.3em }
+  .roandco { height: .9em }
+  .human { height: .8em }
+  .material-vodka { height: 1.5em }
 }
 
-.sponsored-by {
-  margin-top: 50px;
-}
-
-.desktop-sponsors {
-  margin-top: 100px;
-  display: block;
-}
-
-.desktop-sponsors img {
-  width: 90%;
-}
-
-.mobile-sponsors {
-  display: none;
-}
 
 /* TICKET SECTION */
 .contact,
@@ -204,7 +183,7 @@ ul {
 }
 
 #location-details {
-  padding: 50px 0 0 0;
+  margin: 1em 0;
 }
 
 /* CONTACT SECTION */
@@ -261,9 +240,7 @@ a.social:hover {
 
 /* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
-  * {
-    font-size: 14px;
-  }
+
   iframe {
     height: 400px;
     width: 60vw;
@@ -278,24 +255,7 @@ a.social:hover {
   .art-logo-harriett {
     width: 75vw;
   }
-  header {
-    width:100vh;
-    height:45px;
-    position:fixed;
-    -webkit-transform-origin: left top;
-    -webkit-transform:rotate(-90deg) translateX(-100%);
-  }
-  ul.nav {
-    margin:0 auto;
-    height:100%;
-    font-size: 12px !important;
-  }
-  ul.nav li {
-    margin-right:20px;
-    float:right;
-    height:100%;
-    line-height:45px;
-  }
+
   .hosts,
   .info,
   .tickets,
@@ -311,28 +271,8 @@ a.social:hover {
   #location-details {
     padding: 10px 0 0 0;
   }
-  .art-logo-fete {
-    transform: translate(4%, 10%);
-  }
-  .art-logo-harriett {
-    transform: translate(0, -14%);
-  }
   .social {
     margin-bottom: 10px !important;
-  }
-  .art-logo-photo {
-    width: 74vw;
-  }
-  .mobile-sponsors {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .mobile-sponsors img {
-    margin: 0 0 30px 0;
-  }
-  .desktop-sponsors {
-    display: none;
   }
   #contact-logo {
     width: 100px;
@@ -343,25 +283,19 @@ a.social:hover {
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
-  header {
-    font-size: 14px;
-  }
   .hosts,
   .info,
   .tickets,
   .location {
     padding: 0 0 0 150px;
   }
-  .mobile-sponsors {
+  .sponsors {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .mobile-sponsors img {
+  .sponsors img {
     margin: 0 0 30px 0;
-  }
-  .desktop-sponsors {
-    display: none;
   }
   iframe {
     width: 75%;
@@ -383,9 +317,6 @@ a.social:hover {
 }
 
 @media screen and (min-width: 200px) and (max-width: 374px) and (orientation: portrait) {
-  * {
-    font-size: 14px;
-  }
   iframe {
     height: 90vw;
     width: 75vw;
@@ -440,15 +371,12 @@ a.social:hover {
   #contact-logo {
     width: 50px;
   }
-  .mobile-sponsors {
+  .sponsors {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .mobile-sponsors img {
+  .sponsors img {
     margin: 0 0 30px 0;
-  }
-  .desktop-sponsors {
-    display: none;
   }
 }

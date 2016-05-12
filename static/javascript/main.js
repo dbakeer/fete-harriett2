@@ -1,14 +1,14 @@
 // $('.art-logo-fete').hide();
-$('.art-logo-photo').hide();
+// $('.art-logo-photo').hide();
 // $('.art-logo-harriett').hide();
 // $('html').hide();
 
 $(document).on('ready', function(){
   // $('html').fadeIn(2000);
   $('body').removeClass('loading');
-  $('.art-logo-fete').fadeIn(2000);
-  $('.art-logo-harriett').delay(2000).fadeIn(2000);
-  $('.art-logo-photo').delay(4000).fadeIn(2000);
+  // $('.art-logo-fete').fadeIn(2000);
+  // $('.art-logo-harriett').delay(2000).fadeIn(2000);
+  // $('.art-logo-photo').delay(4000).fadeIn(2000);
 });
 
 $(document).ready(function() {
@@ -16,8 +16,6 @@ $(document).ready(function() {
     anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
     menu: '#menu',
     css3:true,
-    fitToSection: true,
-    resize: true,
     scrollOverflow: true,
     onLeave: function(index, nextIndex, direction) {
       if (index == 3 && direction == 'down') {
