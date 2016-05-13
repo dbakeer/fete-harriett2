@@ -12,6 +12,9 @@ $(document).on('ready', function(){
 });
 
 $(document).ready(function() {
+
+  var $header = $('header');
+
   $('#fullpage').fullpage({
     anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
     menu: '#menu',
@@ -39,11 +42,10 @@ $(document).ready(function() {
       }
     },
     afterLoad: function(anchorLink, index){
-      if(index == 1){
-        $('header').css('opacity', '0');
-        $('header').css('transition', 'opacity 0.1s');
+      if(index == 1) {
+        $header.removeClass('active');
       } else {
-        $('header').css('opacity', '1');
+        $header.addClass('active');
       }
     }
   });

@@ -11,6 +11,12 @@ header {
   transition: color 0.7s;
   z-index: 5;
   display: flex;
+  transition: opacity;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+header.active {
+  opacity: 1;
 }
 @media (orientation: landscape) {
   header {
