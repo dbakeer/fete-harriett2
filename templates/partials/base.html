@@ -36,11 +36,11 @@
     {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
     <!-- build:css /static/css/minified.css -->
+    <link rel="stylesheet" href="/static/css/wysiwyg_figures.css">
+    <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
     <link rel="stylesheet" href="/static/css/app.css">
     <!-- endbuild -->
 
-    <link rel="stylesheet" href="/static/css/wysiwyg_figures.css">
-    <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
@@ -50,7 +50,7 @@
     <meta property="og:url" content="http://www.feteharriett.com">
     <meta property="og:title" content="When Great Minds Don’t Think Alike">
     <meta property="og:description" content="Fete Harriett">
-    <meta property="og:image" content="../../images/logo_stacked.svg">
+    <meta property="og:image" content="/static/images/header_photo.jpg">
   </head>
   <body {% block body_attributes %}{% endblock %} class="loading">
     {% block body %}
