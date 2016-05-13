@@ -82,75 +82,6 @@ ul {
     display: inline-block;
   }
 }
-/* GENERAL */
-body {
-  background-color: #f2e5ca;
-  margin: 0 10px;
-  text-transform: uppercase;
-  font-family: TradeGothic;
-  display: block;
-  font-size: 22px;
-  transition: opacity 750ms;
-}
-body.loading {
-  opacity: 0;
-}
-.button,
-button {
-  display: inline-block;
-  font-family: TradeGothic;
-  min-width: 200px;
-  border: 1px black solid;
-  transition-property: color, background, border-color;
-  transition-duration: 700ms;
-  font-size: 14px;
-  padding: 10px 3px;
-  box-sizing: border-box;
-  align-items: flex-start;
-  line-height: normal;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.button:hover,
-button:hover {
-  color: #f2f0ed;
-  background: black;
-  border: 1px #f2f0ed solid;
-  transition-duration: 350ms;
-}
-.button:focus,
-button:focus {
-  outline: 0;
-}
-#ticket-button {
-  margin-top: 50px;
-  border: 1px white solid;
-  color: #f2f0ed;
-  background: black;
-}
-#ticket-button:hover {
-  color: black;
-  background: #f2f0ed;
-}
-.hosts-info {
-  width: 320px;
-  margin: 1em auto;
-}
-.hosted-by {
-  column-width: 320px;
-  margin: 1em auto;
-  padding-left: 0;
-}
-.special-performance {
-  padding: 0;
-}
-#info-details {
-  padding: 0;
-}
-#ticket-details {
-  padding: 0;
-}
-/* FULLPAGE STUFF */
 .section {
   font-size: 22px;
   text-align: center;
@@ -165,90 +96,6 @@ button:focus {
   .section {
     padding-left: 150px;
   }
-}
-/* SPLASH PAGE */
-.art-splash {
-  z-index: 4;
-  position: relative;
-  margin: auto;
-}
-@media (orientation: landscape) {
-  .art-splash {
-    width: 40%;
-  }
-}
-.art-logo-fete {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-38%, -71%);
-  height: 50%;
-  z-index: 1;
-}
-.art-logo-photo {
-  display: block;
-  margin: auto;
-  width: 100%;
-  z-index: 0;
-}
-.art-logo-harriett {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(29%, 83%);
-  height: 50%;
-  z-index: 1;
-}
-/*  HOST SECTION */
-.special-performance {
-  margin-top: 50px;
-}
-/* INFO SECTION */
-.sponsors {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  margin: 1em 0;
-}
-.sponsors img {
-  margin: 1em;
-}
-.sponsors .buhai {
-  height: 0.9em;
-}
-.sponsors .austere {
-  height: 1.3em;
-}
-.sponsors .yola {
-  height: 2.3em;
-}
-.sponsors .roandco {
-  height: 0.9em;
-}
-.sponsors .human {
-  height: 0.8em;
-}
-.sponsors .material-vodka {
-  height: 1.5em;
-}
-/* TICKET SECTION */
-.contact,
-.tickets {
-  background: black;
-  color: #f2f0ed;
-}
-.eventbrite {
-  margin-top: 50px;
-}
-/* LOCATION SECTION */
-#map {
-  height: 600px;
-  margin: 0 27% 75px;
-}
-#location-details {
-  margin: 1em 0;
-  justify-content: center;
 }
 /* CONTACT SECTION */
 .contact-content {
@@ -289,8 +136,160 @@ a.social:hover {
   color: #f2e5ca;
   transition-duration: 350ms;
 }
-.contact {
+.section--contact {
   font-size: 14px;
+}
+/* SPLASH PAGE */
+.art-splash {
+  z-index: 4;
+  position: relative;
+  margin: auto;
+}
+@media (orientation: landscape) {
+  .art-splash {
+    width: 40%;
+  }
+}
+.art-logo-fete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-38%, -71%);
+  height: 50%;
+  z-index: 1;
+}
+.art-logo-photo {
+  display: block;
+  margin: auto;
+  width: 100%;
+  z-index: 0;
+}
+.art-logo-harriett {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(29%, 83%);
+  height: 50%;
+  z-index: 1;
+}
+.hosts-info {
+  width: 320px;
+  margin: 1em auto;
+}
+.hosted-by {
+  column-width: 320px;
+  margin: 1em auto;
+  padding-left: 0;
+}
+.special-performance {
+  padding: 0;
+}
+/*  HOST SECTION */
+.special-performance {
+  margin-top: 50px;
+}
+#info-details {
+  padding: 0;
+}
+/* INFO SECTION */
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+.sponsors img {
+  margin: 1em;
+}
+.sponsors .buhai {
+  height: 0.9em;
+}
+.sponsors .austere {
+  height: 1.3em;
+}
+.sponsors .yola {
+  height: 2.3em;
+}
+.sponsors .roandco {
+  height: 0.9em;
+}
+.sponsors .human {
+  height: 0.8em;
+}
+.sponsors .material-vodka {
+  height: 1.5em;
+}
+/* LOCATION SECTION */
+#map {
+  height: 600px;
+  margin: 0 27% 75px;
+}
+#location-details {
+  margin: 1em 0;
+  justify-content: center;
+}
+#ticket-button {
+  margin-top: 50px;
+  border: 1px white solid;
+  color: #f2f0ed;
+  background: black;
+}
+#ticket-button:hover {
+  color: black;
+  background: #f2f0ed;
+}
+#ticket-details {
+  padding: 0;
+}
+/* TICKET SECTION */
+.section--contact,
+.section--tickets {
+  background: black;
+  color: #f2f0ed;
+}
+.eventbrite {
+  margin-top: 50px;
+}
+/* GENERAL */
+body {
+  background-color: #f2e5ca;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-family: TradeGothic;
+  display: block;
+  font-size: 22px;
+  transition: opacity 750ms;
+}
+body.loading {
+  opacity: 0;
+}
+.button,
+button {
+  display: inline-block;
+  font-family: TradeGothic;
+  min-width: 200px;
+  border: 1px black solid;
+  transition-property: color, background, border-color;
+  transition-duration: 700ms;
+  font-size: 14px;
+  padding: 10px 3px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button:hover,
+button:hover {
+  color: #f2f0ed;
+  background: black;
+  border: 1px #f2f0ed solid;
+  transition-duration: 350ms;
+}
+.button:focus,
+button:focus {
+  outline: 0;
 }
 /* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
@@ -323,7 +322,7 @@ a.social:hover {
   #contact-logo {
     width: 100px;
   }
-  .location {
+  .section--location {
     padding-bottom: 25px;
   }
 }

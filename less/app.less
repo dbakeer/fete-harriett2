@@ -7,6 +7,16 @@
 
 @import "_font-face";
 @import "partials/header";
+
+@import "partials/section";
+@import "partials/section--contact";
+@import "partials/section--feteharriett";
+@import "partials/section--hosts";
+@import "partials/section--info";
+@import "partials/section--location";
+@import "partials/section--tickets";
+
+
 /* GENERAL */
 
 
@@ -53,186 +63,14 @@ button {
 
 
 
-#ticket-button {
-  margin-top: 50px;
-  border: 1px white solid;
-  color: #f2f0ed;
-  background: black;
-}
-
-#ticket-button:hover {
-  color: black;
-  background: #f2f0ed;
-}
 
 
-.hosts-info {
-  width: 320px;
-  margin: 1em auto;
-}
-.hosted-by {
-  column-width: 320px;
-  margin: 1em auto;
-  padding-left: 0;
-}
-.special-performance {
-  padding: 0;
-}
-#info-details {
-  padding: 0;
-}
-#ticket-details {
-  padding: 0;
-}
 
 
-/* FULLPAGE STUFF */
-.section {
-  font-size: 22px;
-  text-align: center;
-  padding: 0 10px 0 45px;
-  @media @portrait {
-    padding: 0 10px 0 45px;
-  }
-  @media @landscape {
-    padding-left: 150px;
-  }
-}
 
 
-/* SPLASH PAGE */
-.art-splash {
-  z-index: 4;
-  position: relative;
-  margin: auto;
-  @media @landscape {
-    width: 40%;
-  }
-}
-
-.art-logo-fete {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-38%, -71%);
-  height: 50%;
-  z-index: 1;
-}
-
-.art-logo-photo {
-  display: block;
-  margin: auto;
-  width: 100%;
-  z-index: 0;
-}
-
-.art-logo-harriett {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(29%, 83%);
-  height: 50%;
-  z-index: 1;
-}
 
 
-/*  HOST SECTION */
-.special-performance {
-  margin-top: 50px;
-}
-
-/* INFO SECTION */
-.sponsors {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  margin: 1em 0;
-  img {
-    margin: 1em;
-  }
-
-  .buhai { height: .9em }
-  .austere { height: 1.3em }
-  .yola { height: 2.3em }
-  .roandco { height: .9em }
-  .human { height: .8em }
-  .material-vodka { height: 1.5em }
-}
-
-
-/* TICKET SECTION */
-.contact,
-.tickets {
-  background: black;
-  color: #f2f0ed;
-}
-
-.eventbrite {
-  margin-top: 50px;
-}
-
-/* LOCATION SECTION */
-#map {
-  height: 600px;
-  margin: 0 27% 75px;
-}
-
-#location-details {
-  margin: 1em 0;
-  justify-content: center;
-}
-
-/* CONTACT SECTION */
-.contact-content {
-  padding: 35px 0;
-  text-align: center;
-}
-
-#contact-logo {
-  width: 200px;
-  height: auto;
-}
-
-.contact-address {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-.contact-link {
-  margin-top: 0;
-  a {
-    color: white;
-    text-decoration: none;
-    transition: color 700ms, text-decoration 700ms;
-  }
-}
-
-
-.contact-link a:hover {
-  color: #f2e5ca;
-  text-decoration: underline;
-}
-
-.social {
-  margin: 0 25px;
-}
-
-a.social {
-  color: black;
-  text-decoration: none;
-  transition-property: color, background-color;
-  transition-duration: 700ms;
-  &:hover {
-    background: black;
-    color: #f2e5ca;
-    transition-duration: 350ms;
-  }
-}
-
-.contact {
-  font-size: 14px;
-}
 
 /* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
@@ -266,7 +104,7 @@ a.social {
   #contact-logo {
     width: 100px;
   }
-  .location {
+  .section--location {
     padding-bottom: 25px;
   }
 }
