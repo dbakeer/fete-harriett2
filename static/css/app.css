@@ -1,19 +1,47 @@
+@font-face {
+  font-family: 'TradeGothic';
+  src: url('/static/fonts/trade_gothic.eot');
+  src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'), url('/static/fonts/trade_gothic.woff2') format('woff2'), url('/static/fonts/trade_gothic.woff') format('woff'), url('/static/fonts/trade_gothic.ttf') format('truetype'), url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 header {
-  padding-left: 40px;
+  padding-left: 30px;
   position: absolute;
   transition: color 0.7s;
   z-index: 5;
   display: flex;
-  flex-direction: row;
 }
 @media (orientation: landscape) {
   header {
     flex-direction: column;
   }
 }
+@media (orientation: portrait) {
+  header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    top: 100%;
+    left: 0;
+    width: 100vh;
+    height: 45px;
+    position: fixed;
+    transform-origin: left top;
+    transform: rotate(-90deg);
+  }
+}
 header h1 {
   font-size: inherit;
   display: inline-block;
+}
+@media (orientation: portrait) {
+  header h1 {
+    display: inline-block;
+    margin: 0;
+    order: 1;
+  }
 }
 @media (orientation: landscape) {
   header h1 {
@@ -24,6 +52,7 @@ header a {
   color: black;
   text-decoration: none;
   display: inline-block;
+  padding: 0.38em;
   transition: color 0.7s;
 }
 header a:hover {
@@ -39,14 +68,21 @@ ul {
   font-size: 14px;
   padding-left: 0;
 }
-/* GENERAL */
-@font-face {
-  font-family: 'TradeGothic';
-  src: url('/static/fonts/trade_gothic.eot');
-  src: url('/static/fonts/trade_gothic.eot?#iefix') format('embedded-opentype'), url('/static/fonts/trade_gothic.woff2') format('woff2'), url('/static/fonts/trade_gothic.woff') format('woff'), url('/static/fonts/trade_gothic.ttf') format('truetype'), url('/static/fonts/trade_gothic.svg#tradegothicbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@media (orientation: portrait) {
+  .nav {
+    display: inline-block;
+    margin: 0;
+  }
 }
+.nav li.active a {
+  text-decoration: underline;
+}
+@media (orientation: portrait) {
+  .nav li {
+    display: inline-block;
+  }
+}
+/* GENERAL */
 body {
   background-color: #f2e5ca;
   margin: 0 10px;
@@ -75,15 +111,16 @@ button {
   text-decoration: none;
   text-transform: uppercase;
 }
-button:focus {
-  outline: 0;
-}
 .button:hover,
 button:hover {
   color: #f2f0ed;
   background: black;
   border: 1px #f2f0ed solid;
   transition-duration: 350ms;
+}
+.button:focus,
+button:focus {
+  outline: 0;
 }
 #ticket-button {
   margin-top: 50px;
@@ -95,17 +132,14 @@ button:hover {
   color: black;
   background: #f2f0ed;
 }
-.hosts {
-  padding-top: 75px;
-}
 .hosts-info {
-  padding: 0;
+  width: 320px;
+  margin: 1em auto;
 }
 .hosted-by {
-  column-width: 160px;
-  margin: auto;
-  max-width: 1000px;
-  padding: 0;
+  column-width: 320px;
+  margin: 1em auto;
+  padding-left: 0;
 }
 .special-performance {
   padding: 0;
@@ -120,13 +154,28 @@ button:hover {
 .section {
   font-size: 22px;
   text-align: center;
+  padding: 0 10px 0 45px;
+}
+@media (orientation: portrait) {
+  .section {
+    padding: 0 10px 0 45px;
+  }
+}
+@media (orientation: landscape) {
+  .section {
+    padding-left: 150px;
+  }
 }
 /* SPLASH PAGE */
 .art-splash {
   z-index: 4;
   position: relative;
   margin: auto;
-  width: 40%;
+}
+@media (orientation: landscape) {
+  .art-splash {
+    width: 40%;
+  }
 }
 .art-logo-fete {
   position: absolute;
@@ -199,6 +248,7 @@ button:hover {
 }
 #location-details {
   margin: 1em 0;
+  justify-content: center;
 }
 /* CONTACT SECTION */
 .contact-content {
@@ -217,30 +267,30 @@ button:hover {
   margin-top: 0;
 }
 .contact-link a {
-  color: white !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.7s, text-decoration 0.7s;
+  color: white;
+  text-decoration: none;
+  transition: color 700ms, text-decoration 700ms;
 }
 .contact-link a:hover {
-  color: #f2e5ca !important;
-  text-decoration: underline !important;
+  color: #f2e5ca;
+  text-decoration: underline;
 }
 .social {
   margin: 0 25px;
 }
 a.social {
-  color: black !important;
-  text-decoration: none !important;
+  color: black;
+  text-decoration: none;
   transition-property: color, background-color;
   transition-duration: 700ms;
 }
 a.social:hover {
   background: black;
-  color: #f2e5ca !important;
+  color: #f2e5ca;
   transition-duration: 350ms;
 }
 .contact {
-  font-size: 14px !important;
+  font-size: 14px;
 }
 /* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
@@ -258,12 +308,6 @@ a.social:hover {
   .art-logo-harriett {
     width: 75vw;
   }
-  .hosts,
-  .info,
-  .tickets,
-  .location {
-    padding: 0 10px 0 45px;
-  }
   .contact-content {
     padding: 10px 0;
   }
@@ -274,7 +318,7 @@ a.social:hover {
     padding: 10px 0 0 0;
   }
   .social {
-    margin-bottom: 10px !important;
+    margin-bottom: 10px;
   }
   #contact-logo {
     width: 100px;
@@ -283,13 +327,7 @@ a.social:hover {
     padding-bottom: 25px;
   }
 }
-@media screen and (max-width: 800px) and (orientation: landscape) {
-  .hosts,
-  .info,
-  .tickets,
-  .location {
-    padding: 0 0 0 150px;
-  }
+@media (orientation: landscape) {
   .sponsors {
     display: flex;
     align-items: center;
@@ -309,43 +347,20 @@ a.social:hover {
     font-size: 14px;
   }
   #contact-logo {
-    width: 100px !important;
+    width: 100px;
     height: auto;
   }
   .contact-content {
     padding: 0;
   }
 }
-@media screen and (min-width: 200px) and (max-width: 374px) and (orientation: portrait) {
+@media (orientation: portrait) {
   iframe {
     height: 90vw;
     width: 75vw;
   }
   button {
     margin-bottom: 10px;
-  }
-  header {
-    width: 100vh;
-    height: 45px;
-    position: fixed;
-    -webkit-transform-origin: left top;
-    -webkit-transform: rotate(-90deg) translateX(-100%);
-  }
-  ul.nav {
-    margin: 0 auto;
-    height: 100%;
-  }
-  ul.nav li {
-    margin-right: 20px;
-    float: right;
-    height: 100%;
-    line-height: 45px;
-  }
-  .hosts,
-  .info,
-  .tickets,
-  .location {
-    padding: 0 10px 0 45px;
   }
   .contact-content {
     padding: 25px 0 0 0;
@@ -366,7 +381,7 @@ a.social:hover {
     width: 50vw;
   }
   .social {
-    margin-bottom: 10px !important;
+    margin-bottom: 10px;
   }
   #contact-logo {
     width: 50px;
