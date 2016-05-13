@@ -49,3 +49,26 @@ a.social {
 .section--contact {
   font-size: 14px;
 }
+
+.sponsors {
+  @media @portrait {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @media @landscape {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  img {
+    @media @portrait {
+      margin: 0 0 30px 0;
+    }
+    @media @landscape {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+

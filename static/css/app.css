@@ -139,6 +139,30 @@ a.social:hover {
 .section--contact {
   font-size: 14px;
 }
+@media (orientation: portrait) {
+  .sponsors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (orientation: landscape) {
+  .sponsors {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+@media (orientation: portrait) {
+  .sponsors img {
+    margin: 0 0 30px 0;
+  }
+}
+@media (orientation: landscape) {
+  .sponsors img {
+    margin: 0 0 30px 0;
+  }
+}
 /* SPLASH PAGE */
 .art-splash {
   z-index: 4;
@@ -229,6 +253,23 @@ a.social:hover {
   margin: 1em 0;
   justify-content: center;
 }
+@media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
+  iframe {
+    height: 400px;
+    width: 60vw;
+  }
+}
+@media (orientation: portrait) {
+  iframe {
+    height: 90vw;
+    width: 75vw;
+  }
+}
+@media (orientation: landscape) {
+  iframe {
+    width: 75%;
+  }
+}
 #ticket-button {
   margin-top: 50px;
   border: 1px white solid;
@@ -293,10 +334,6 @@ button:focus {
 }
 /* MOBILE STYLING */
 @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
-  iframe {
-    height: 400px;
-    width: 60vw;
-  }
   button {
     margin-bottom: 10px;
   }
@@ -327,17 +364,6 @@ button:focus {
   }
 }
 @media (orientation: landscape) {
-  .sponsors {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sponsors img {
-    margin: 0 0 30px 0;
-  }
-  iframe {
-    width: 75%;
-  }
   #location-details {
     display: flex;
   }
@@ -349,15 +375,8 @@ button:focus {
     width: 100px;
     height: auto;
   }
-  .contact-content {
-    padding: 0;
-  }
 }
 @media (orientation: portrait) {
-  iframe {
-    height: 90vw;
-    width: 75vw;
-  }
   button {
     margin-bottom: 10px;
   }
@@ -384,13 +403,5 @@ button:focus {
   }
   #contact-logo {
     width: 50px;
-  }
-  .sponsors {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sponsors img {
-    margin: 0 0 30px 0;
   }
 }
