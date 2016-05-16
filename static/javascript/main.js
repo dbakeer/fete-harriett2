@@ -16,7 +16,7 @@ $(document).ready(function() {
   var $header = $('header');
 
   $('#fullpage').fullpage({
-    anchors: ['feteharriett', 'hosts', 'info', 'tickets', 'location', 'contact'],
+    anchors: ['feteharriett', 'info', 'hosts', 'tickets', 'location', 'contact'],
     menu: '#menu',
     css3:true,
     scrollOverflow: true,
