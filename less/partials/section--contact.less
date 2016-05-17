@@ -2,11 +2,17 @@
 .contact-content {
   padding: 35px 0;
   text-align: center;
+  @media @portrait {
+    padding: 15px 0 0 0;
+  }
 }
 
-#contact-logo {
+.contact-logo {
   width: 200px;
   height: auto;
+  @media @portrait {
+    width: 100px;
+  }
 }
 
 .contact-address {
@@ -55,11 +61,6 @@ a.social {
     display: flex;
     align-items: center;
     flex-direction: column;
-  }
-  @media @landscape {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
   }
 
   img {

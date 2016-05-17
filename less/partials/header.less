@@ -1,6 +1,10 @@
+.title {
+  padding: 0;
+}
+
 header {
   padding-left: 30px;
-  position: absolute;
+  position: fixed;
   transition: color 0.7s;
   z-index: 5;
   display: flex;
@@ -16,22 +20,28 @@ header {
   }
   @media @portrait {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding-left: 0;
     top: 100%;
     left: 0;
     width: 100vh;
     height: 45px;
+    padding: 0 2em;
+    box-sizing: border-box;
     position: fixed;
     transform-origin: left top;
     transform: rotate(-90deg);
   }
 
+  ul {
+    line-height: normal;
+  }
 
   h1 {
     font-size: inherit;
     display: inline-block;
+    padding-left: 4px;
     @media @portrait {
       display: inline-block;
       margin: 0;
