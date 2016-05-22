@@ -1,39 +1,52 @@
-// $('.art-logo-fete').hide();
-// $('.art-logo-photo').hide();
-// $('.art-logo-harriett').hide();
-// $('html').hide();
-
-$(document).on('ready', function(){
-  // $('html').fadeIn(2000);
-  $('body').removeClass('loading');
-  // $('.art-logo-fete').fadeIn(2000);
-  // $('.art-logo-harriett').delay(2000).fadeIn(2000);
-  // $('.art-logo-photo').delay(4000).fadeIn(2000);
-});
-
 $(document).ready(function() {
 
   var $header = $('header');
 
   $('#fullpage').fullpage({
-    anchors: ['feteharriett', 'info', 'hosts', 'tickets', 'location', 'contact'],
+    anchors: ['feteharriett', 'info', 'mission', 'hosts', 'tickets', 'location', 'contact'],
     menu: '#menu',
-    css3:true,
-    scrollOverflow: true,
+    responsiveHeight: 1000,
+    // css3:true,
+    // autoScrolling: false,
+    // scrollOverflow: false,
+    // normalScrollElements: ".section",
+    // scrollBar: false,
+    // fitToSection: true,
     onLeave: function(index, nextIndex, direction) {
-      if (index == 3 && direction == 'down') {
+      if (index == 4 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-      } else if (index == 5 && direction == 'up') {
+      } else if (index == 6 && direction == 'up') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-      } else if (index == 1 && nextIndex == 4 && direction == 'down') {
+      } else if (index == 1 && nextIndex == 5 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-      } else if (index == 2 && nextIndex == 4 && direction == 'down') {
+      } else if (index == 2 && nextIndex == 5 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
-      } else if (index == 6 && nextIndex == 4 && direction == 'up') {
+      } else if (index == 7 && nextIndex == 5 && direction == 'up') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 4 && direction == 'up') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 1 && nextIndex == 3 && direction == 'down') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 2 && nextIndex == 3 && direction == 'down') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 4 && nextIndex == 3 && direction == 'up') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 5 && nextIndex == 3 && direction == 'up') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 6 && nextIndex == 3 && direction == 'up') {
+        $('header a').css('color', '#f2f0ed');
+        $('header li').css('color', '#f2f0ed');
+      } else if (index == 7 && nextIndex == 3 && direction == 'up') {
         $('header a').css('color', '#f2f0ed');
         $('header li').css('color', '#f2f0ed');
       } else {
