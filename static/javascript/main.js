@@ -7,7 +7,7 @@ $(document).ready(function() {
     menu: '#menu',
     responsiveHeight: 1000,
     // css3:true,
-    // autoScrolling: false,
+    autoScrolling: false,
     // scrollOverflow: false,
     // normalScrollElements: ".section",
     // scrollBar: false,
