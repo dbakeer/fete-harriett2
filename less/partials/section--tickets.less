@@ -1,7 +1,8 @@
+
 .giving-levels {
   border-bottom: 1px black solid;
   text-align: left;
-  padding-bottom: 25px;
+  padding: 50px 0 25px 0;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -17,6 +18,9 @@
 table {
   max-width: 800px;
   margin: 0 auto;
+  @media screen and @portrait {
+    font-size: 16px !important;
+  }
 }
 
 tr {
@@ -34,8 +38,14 @@ tr:hover {
 
 td {
   padding: 25px;
+  @media screen and @portrait {
+    padding: 25px 25px 25px 0;
+  }
 }
 
 .description {
   font-size: 18px;
+  @media screen and @portrait {
+    font-size: 16px !important;
+  }
 }

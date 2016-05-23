@@ -1,15 +1,26 @@
 $(document).ready(function() {
 
   $(".clickable-row").click(function() {
-        window.document.location = $(this).data("href");
-    });
+    window.document.location = $(this).data("href");
+  });
+
+  // function resHeight() {
+  //   if ($(window).height <= 1300) {
+  //     alert("Hiiiieee");
+  //   } else if ($(window).height > 1300) {
+  //     alert("Byeeeee");
+  //   } else {
+  //     alert("?????");
+  //   }
+  // }
 
   var $header = $('header');
 
   $('#fullpage').fullpage({
     anchors: ['feteharriett', 'event', 'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
     menu: '#menu',
-    responsiveHeight: 1000,
+    responsiveHeight: 1300,
+
     onLeave: function(index, nextIndex, direction) {
       if (index == 2 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
