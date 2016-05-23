@@ -1,5 +1,3 @@
-// This is your main LESS file. It imports the source boostrap files.
-
 @tablet_portrait: ~"(min-width: 768px)";
 @portrait: ~"(orientation: portrait)";
 @landscape: ~"(orientation: landscape)";
@@ -17,8 +15,6 @@
 @import "partials/section--donors";
 @import "partials/section--contact";
 
-/* GENERAL */
-
 .slimScrollDiv {
   -webkit-overflow-scrolling: touch;
 }
@@ -34,8 +30,7 @@ body {
 }
 
 
-.button,
-button {
+.button {
   display: inline-block;
   font-family: TradeGothic;
   min-width: 200px;
@@ -60,76 +55,7 @@ button {
   }
 }
 
-/* MOBILE STYLING */
-// @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
-
-//   button {
-//     margin-bottom: 10px;
-//   }
-//   .art-logo-fete {
-//     margin: 0 0 0 0;
-//     width: 50vw;
-//   }
-//   .art-logo-harriett {
-//     width: 75vw;
-//   }
-//   .contact-content {
-//     padding: 10px 0;
-//   }
-//   .stacked-logo {
-//     width: 50vw;
-//   }
-//   #location-details {
-//     padding: 10px 0 0 0;
-//   }
-//   .social {
-//     margin-bottom: 10px;
-//   }
-//   #contact-logo {
-//     width: 100px;
-//   }
-//   .section--location {
-//     padding-bottom: 25px;
-//   }
-// }
-
-// @media @landscape {
-//   #location-details {
-//     display: flex;
-//   }
-//   .contact-address,
-//   .contact-link {
-//     font-size: 14px;
-//   }
-//   #contact-logo {
-//     width: 100px;
-//     height: auto;
-//   }
-// }
-
-// @media (orientation: portrait) {
-//   button {
-//     margin-bottom: 10px;
-//   }
-//   .contact-content {
-//     padding: 25px 0 0 0;
-//   }
-//   #location-details {
-//     padding: 20px 0 0 0;
-//   }
-//   .art-logo-fete {
-//     transform: translate(4%, 10%);
-//   }
-//   .art-logo-harriett {
-//     transform: translate(0, -14%);
-//   }
-//   .stacked-logo {
-//     width: 50vw;
-//   }
-//   .social {
-//     margin-bottom: 10px;
-//   }
-//   #contact-logo {
-//     width: 50px;
-//   }
-// }
+ul {
+  line-height: normal;
+  list-style-type: none;
+}

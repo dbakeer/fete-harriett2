@@ -5,3 +5,70 @@ p:first-child {
 p:last-child {
   margin-bottom: 0;
 }
+
+.sponsored-by {
+  margin: 0 auto;
+}
+
+.sponsored-by2 {
+  margin: 0 0 75px 0;
+}
+
+.sponsors {
+  padding-top: 10em;
+  margin: 1em auto;
+  margin-bottom: 0;
+  max-width: 764px;
+  text-align: center;
+  @media @portrait {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img {
+    @media @portrait {
+      margin: 0 0 30px 0;
+    }
+    @media @landscape {
+      margin: 0px 30px 30px 0;
+    }
+  }
+  img {
+    margin: 1em;
+    vertical-align: middle;
+  }
+
+  .refinery29 {
+    height: 3.5em;
+  }
+
+  .buhai {
+    height: .9em;
+  }
+
+  .austere {
+    height: 1.3em;
+  }
+
+  .yola {
+    height: 2.3em;
+  }
+
+  .roandco {
+    height: .9em;
+  }
+
+  .human {
+    height: .8em;
+  }
+
+  .material-vodka {
+    height: 1.5em;
+  }
+
+  .proof-bakery {
+    height: 6em;
+  }
+
+}
