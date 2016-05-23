@@ -10,12 +10,6 @@ $(document).ready(function() {
     anchors: ['feteharriett', 'event', 'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
     menu: '#menu',
     responsiveHeight: 1000,
-    // css3:true,
-    // autoScrolling: false,
-    scrollOverflow: true,
-    // normalScrollElements: ".section",
-    // scrollBar: false,
-    // fitToSection: true,
     onLeave: function(index, nextIndex, direction) {
       if (index == 2 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
