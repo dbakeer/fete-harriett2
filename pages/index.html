@@ -126,15 +126,15 @@
   <div class="section section--auction">
     <p>Visit Fete Harriett's online auction site offering a wide array of art, accessories and much more</p>
     <p>All proceeds to benefit Harriet Buhai Center for Family Law</p>
-    <a class="social button" href="https://galabid.com/auction/feteharriett" target="_blank">View Auction</a>
+    <a class="social button" href="https://galabid.com/auction/feteharriett">View Auction</a>
   </div>
 
 
 
   <div class="section section--location">
-    <div style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
-      <a class="map" href="https://www.google.com/maps/dir/''/austere+dtla/@34.0426492,-118.2920454,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x80c2c7ca40a69f17:0x70c5fb368604de9!2m2!1d-118.257026!2d34.042583"><img src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap&center=Austere+DTLA,Los+Angeles,CA&zoom=16&markers=size:mid%7Ccolor:red%7CAustere+DTLA,Los+Angeles,CA&key=AIzaSyAGVYwB0FzqIlNQv5f86uR61HLGPFWOLxc"></a>
-    </div>
+      <a class="map" href="https://www.google.com/maps/dir/''/austere+dtla/@34.0426492,-118.2920454,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x80c2c7ca40a69f17:0x70c5fb368604de9!2m2!1d-118.257026!2d34.042583">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?size=800x400&scale=2&style=saturation:-100&maptype=roadmap&center=Austere+DTLA,Los+Angeles,CA&zoom=16&markers=size:mid%7Ccolor:0xFCE5CA%7CAustere+DTLA,Los+Angeles,CA&key=AIzaSyAGVYwB0FzqIlNQv5f86uR61HLGPFWOLxc">
+      </a>
     <div id="location-details">
       <a class="social button" href="//www.facebook.com/harriettbuhaicenterforfamilylaw" target="_blank">Facebook</a>
       <a class="social button" href="//twitter.com/hbcfl" target="_blank">Twitter</a>
@@ -149,7 +149,7 @@
     <ul class="donor-list">
       {% set data = cms.donors %}
       {% for object in data %}
-        <li>{{ object.wysiwyg_text|safe }}
+        {{ object.wysiwyg_text|safe }}
       {% endfor %}
     </ul>
     <div class="sponsors">

@@ -1,29 +1,12 @@
 .section--location {
-  iframe {
-    @media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
-      height: 400px;
-      width: 60vw;
-    }
-    @media @portrait {
-      height: 90vw;
-      width: 75vw;
-    }
-    @media screen and (min-width: 800px) {
-      width: 700px;
-      height: 500px;
-    }
-  }
   #location-details {
     margin: 1em 0;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .social {
     margin: 0 25px;
-    @media @portrait {
-      margin: 5px 0;
-    }
-  }
-  a {
     color: black;
     text-decoration: none;
     transition-property: color, background-color;
@@ -33,9 +16,18 @@
       color: #f2e5ca;
       transition-duration: 350ms;
     }
+    @media screen and (max-width: 1000px) {
+      margin: 10px 0;
+    }
   }
 }
 
 .map {
   border-bottom: none;
+  img {
+    max-width: 800px;
+    @media screen and (max-width: 1000px) {
+      width: 75vw;
+    }
+  }
 }

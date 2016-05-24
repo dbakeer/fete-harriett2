@@ -16,7 +16,7 @@ $(document).ready(function() {
     responsiveHeight: 1300,
     navigation: true,
     navigationPosition: 'left',
-    navigationTooltips: ['feteharriett', 'event', 'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
+    navigationTooltips: ['event', 'about', 'tickets', 'auction', 'location', 'donors'],
     onLeave: function(index, nextIndex, direction) {
       if (index == 2 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
