@@ -58,9 +58,11 @@ $(document).ready(function() {
       if(index == 1) {
         $header.removeClass('active');
         $('.event-date').removeClass('active');
+        $('#fp-nav').removeClass('mobile-active');
       } else {
         $header.addClass('active');
         $('.event-date').addClass('active');
+        $('#fp-nav').addClass('mobile-active');
       }
     }
   });
