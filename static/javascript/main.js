@@ -20,7 +20,9 @@ $(document).ready(function() {
     anchors: ['feteharriett', 'event', 'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
     menu: '#menu',
     responsiveHeight: 1300,
-
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: ['feteharriett', 'event', 'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
     onLeave: function(index, nextIndex, direction) {
       if (index == 2 && direction == 'down') {
         $('header a').css('color', '#f2f0ed');
