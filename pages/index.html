@@ -98,6 +98,7 @@
         <li>Anh Do
         <li>Rachael Yaeger
         <li>Gina Correll Aglietti
+        <li>Piera Gelardi
       </ul>
 
       <h4 class="performances-by">Performances by</h4>
@@ -155,18 +156,3 @@
   </div>
 
 </div>
-
-  {# If you have at least content page type, we show a list. #}
-  {% if cms_types|size !== 0 %}
-
-    <h3>Content types you've created in the CMS so far.</h3>
-
-    <ul>
-      {% for type in cms_types %}
-        <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
-      {% endfor %}
-    </ul>
-
-  {% endif %}
-
-{% endblock %}
