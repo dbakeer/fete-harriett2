@@ -1,42 +1,46 @@
 .section--tickets {
   .giving-levels {
-    border-bottom: 1px black solid;
     text-align: left;
-    padding: 50px 0 25px 0;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 0 0 15px 30px;
+    margin: auto;
+    max-width: 750px;
   }
   table {
+    border-top: 1px solid black;
     text-align: left;
   }
   td {
-    padding: 25px;
-    @media screen and @portrait {
-      padding: 25px 0;
+    vertical-align: top;
+    padding: 15px 0;
+    @media @portrait {
+      padding: 35px 0 0 0;
     }
   }
   .level {
-    width: 150px;
+    max-width: 100px;
+    padding: 15px 50px 40px 10px;
     @media screen and @portrait {
       text-align: center;
-      padding: 25px 0;
+      padding: 35px 60px 35px 0;
     }
   }
   .price {
-    width: 150px;
+    max-width: 100px;
+    text-align: center;
     @media screen and @portrait {
-      text-align: center;
-      padding: 25px 0;
+      padding-top: 35px;
     }
   }
   .description {
+    max-width: 500px;
     font-size: 18px;
+    padding-left: 65px;
     @media screen and @portrait {
       font-size: 16px !important;
     }
   }
   .ticket-table {
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     @media screen and @portrait {
       font-size: 16px !important;
