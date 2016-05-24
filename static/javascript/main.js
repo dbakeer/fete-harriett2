@@ -1,18 +1,12 @@
+$('html').hide();
+
 $(document).ready(function() {
+
+  $('html').fadeIn();
 
   $(".clickable-row").click(function() {
     window.document.location = $(this).data("href");
   });
-
-  // function resHeight() {
-  //   if ($(window).height <= 1300) {
-  //     alert("Hiiiieee");
-  //   } else if ($(window).height > 1300) {
-  //     alert("Byeeeee");
-  //   } else {
-  //     alert("?????");
-  //   }
-  // }
 
   var $header = $('header');
 
