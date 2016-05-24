@@ -1,51 +1,45 @@
-
-.giving-levels {
-  border-bottom: 1px black solid;
-  text-align: left;
-  padding: 50px 0 25px 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.level {
-  width: 150px;
-}
-
-.price {
-  width: 150px;
-}
-
-table {
-  max-width: 800px;
-  margin: 0 auto;
-  @media screen and @portrait {
-    font-size: 16px !important;
+.section--tickets {
+  .giving-levels {
+    border-bottom: 1px black solid;
+    text-align: left;
+    padding: 50px 0 25px 0;
+    max-width: 800px;
+    margin: 0 auto;
   }
-}
-
-tr {
-  text-align: left;
-  background: #f2e5ca;
-  color: black;
-  transition: color 0.7s, background 0.7s;
-}
-
-tr:hover {
-  background: black;
-  color: #f2e5ca;
-  cursor: pointer;
-}
-
-td {
-  padding: 25px;
-  @media screen and @portrait {
-    padding: 25px 25px 25px 0;
+  td {
+    padding: 25px;
+    @media screen and @portrait {
+      padding: 25px 25px 25px 0;
+    }
   }
-}
-
-.description {
-  font-size: 18px;
-  @media screen and @portrait {
-    font-size: 16px !important;
+  .level {
+    width: 150px;
+  }
+  .price {
+    width: 150px;
+  }
+  .description {
+    font-size: 18px;
+    @media screen and @portrait {
+      font-size: 16px !important;
+    }
+  }
+  .ticket-table {
+    max-width: 800px;
+    margin: 0 auto;
+    @media screen and @portrait {
+      font-size: 16px !important;
+    }
+  }
+  .clickable-row {
+    text-align: left;
+    background: #f2e5ca;
+    color: black;
+    transition: color 0.7s, background 0.7s;
+  }
+  .clickable-row:hover {
+    background: black;
+    color: #f2e5ca;
+    cursor: pointer;
   }
 }

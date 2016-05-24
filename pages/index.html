@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="section section--info">
+  <div class="section section--event">
     <p class="block-text first">Please join us for a rad evening of women supporting women. The Harriett Buhai Center for Family Law provides women living below the poverty line with the tools they need to navigate the family court system. With the help of volunteers, the Center protects victims of domestic violence and children in poverty by offering free family law assistance and legal education to the poor.</p>
     <p class="block-text">The staff and volunteers at the Center aspire to create a community where poverty is not a barrier to those who seek to resolve critical family law matters and domestic violence in our community no longer exists.</p>
     <p class="block-text">We have brought together a group of strong female hosts from the fashion, art, design, entertainment and legal communities to celebrate and support the work of the Harriet Buhai Center for Family Law. We will dress chic, dance hard and party until midnight, while raising money to support a very worthy cause.</p>
@@ -102,33 +102,33 @@
 
   <div class="section section--tickets">
     <div class="giving-levels">Giving Levels</div>
-    <table>
-      <tr class='clickable-row' data-href='http://www.eventbrite.com/e/fete-harriett-tickets-24754350930'>
+    <table class="ticket-table">
+      <tr class="clickable-row" data-href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">
         <td class="level">Level 1</td>
         <td class="price">$150</td>
         <td class="description">1 ticket<br/>drink/dance/live music</td>
       </tr>
-      <tr class='clickable-row' data-href='http://www.eventbrite.com/e/fete-harriett-tickets-24754350930'>
+      <tr class="clickable-row" data-href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">
         <td class="level">Level 2</td>
         <td class="price">$300</td>
         <td class="description">1 vip ticket = vip section, vip eat and drink, vip cocktail hour</td>
       </tr>
-      <tr class='clickable-row' data-href='http://www.eventbrite.com/e/fete-harriett-tickets-24754350930'>
+      <tr class="clickable-row" data-href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">
         <td class="level">Level 3</td>
         <td class="price">$500</td>
         <td class="description">2 vip tickets = vip section, vip eat and drink, vip cocktail hour</td>
       </tr>
-      <tr class='clickable-row' data-href='http://www.eventbrite.com/e/fete-harriett-tickets-24754350930'>
+      <tr class="clickable-row" data-href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">
         <td class="level">Level 4</td>
         <td class="price">$1000</td>
         <td class="description">"Harriett Gang Friends" Public Listing on Website and Program = 2 VIP tickets, vip section, vip cocktail hour</td>
       </tr>
-      <tr class='clickable-row' data-href='http://www.eventbrite.com/e/fete-harriett-tickets-24754350930'>
+      <tr class="clickable-row" data-href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">
         <td class="level">Level 5</td>
         <td class="price">$2500</td>
         <td class="description">"Harriett Gang Patrons" Listing on Website and Program = 6 VIP tickets, VIP section, VIP cocktail hour</td>
       </tr>
-      <tr class='clickable-row' data-href='http://www.eventbrite.com/e/fete-harriett-tickets-24754350930'>
+      <tr class="clickable-row" data-href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">
         <td class="level">Level 6</td>
         <td class="price">$5000</td>
         <td class="description">"Harriett Gang Leaders" = 10 VIP tickets, vip section, vip cocktail hour</td>
@@ -161,10 +161,10 @@
 
   <div class="section section--donors">
     <p>Donors</p>
-    <ul class="hosted-by">
+    <ul class="donor-list">
       {% set data = cms.donors %}
       {% for object in data %}
-        {{ object.wysiwyg_text|safe }}
+        <li>{{ object.wysiwyg_text|safe }}
       {% endfor %}
     </ul>
     <div class="sponsors">
