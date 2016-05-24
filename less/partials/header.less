@@ -1,7 +1,3 @@
-.title {
-  padding: 0;
-}
-
 header {
   padding-left: 30px;
   position: fixed;
@@ -14,41 +10,28 @@ header {
   &.active {
     opacity: 1;
   }
-
   @media @landscape {
     flex-direction: column;
   }
-  @media @portrait {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 0;
-    top: 100%;
-    left: 0;
-    width: 100vh;
-    height: 45px;
-    padding: 0 2em;
-    box-sizing: border-box;
-    position: fixed;
-    transform-origin: left top;
-    transform: rotate(-90deg);
+  @media screen and (max-width: 799px) {
+    display: none;
   }
-
-  ul {
-    line-height: normal;
+  .title {
+    padding: 0;
   }
-
   h1 {
-    font-size: inherit;
     display: inline-block;
     padding-left: 4px;
     @media @portrait {
       display: inline-block;
       margin: 0;
       order: 1;
+      font-size: 14px;
+      display: none;
     }
     @media @landscape {
       display: block;
+      font-size: 22px;
     }
   }
   a {
@@ -61,31 +44,48 @@ header {
       text-decoration: underline;
     }
   }
-}
-
-
-nav {
-  line-height: 36px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.nav {
-  font-size: 14px;
-  padding-left: 0;
-  @media @portrait {
-    display: inline-block;
-    margin: 0;
-  }
-  li.active a {
-    text-decoration: underline;
-  }
-  li {
-    margin: -10px 0;
+  .nav {
+    font-size: 14px;
+    padding-left: 0;
     @media @portrait {
       display: inline-block;
+      margin: 0;
     }
+    li.active a {
+      text-decoration: underline;
+    }
+    li {
+      margin: -10px 0;
+      @media @portrait {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.mobile-active {
+  @media @portrait {
+    left: 0px !important;
+    display: block !important;
+  }
+  @media @landscape {
+    display: none;
+  }
+}
+
+.event-date {
+  right: 0;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.1s;
+  transition: color 0.7s;
+  z-index: 3;
+  font-size: 22px;
+  padding: 0.67em 30px 0 0;
+  &.active {
+    opacity: 1;
+  }
+  @media @portrait{
+    display: none;
   }
 }

@@ -1,0 +1,169 @@
+{# ------------------------------------------------------- #}
+
+{# YOUR HOMEPAGE #}
+
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+
+{# ------------------------------------------------------- #}
+
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+
+{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
+{% block title %}{% parent %}{% endblock %}
+
+{% block content %}
+
+{% block header %}
+  {% include "templates/partials/header.html" %}
+{% endblock %}
+
+<div id="fullpage">
+  <div class="section section--feteharriett">
+    <div class="art-splash">
+      <img class="art-logo-fete" src="/static/images/fete.svg">
+      <img class="art-logo-photo" src="/static/images/header_photo.jpg">
+      <img class="art-logo-harriett" src="/static/images/harriett.svg">
+    </div>
+  </div>
+
+  <div class="section section--info">
+    <p class="hosts-info">Please join the Harriett gang for the 1st annual
+      Fête Harriett an evening of music, mezcal, and good times in support
+      of the harriett buhai center for family law</p>
+    <div id="info-details">
+      <p class="reg-text">June 29th 2016</p>
+      <p class="reg-text">8PM-Midnight</p>
+      <p class="reg-text">VIP Yola Mezcal Cocktail Reception</p>
+      <p class="reg-text">7-8PM</p>
+      <p class="space-text">Austere</p>
+      <p class="reg-text">912 S HILL ST</p>
+      <p class="reg-text">LOS ANGELES | CA 90015</p>
+    </div>
+  </div>
+
+  <div class="section section--mission">
+    <div class="mission">
+      <p>MISSION</p>
+      <p class="summary-text">WE PROTECT VICTIMS OF DOMESTIC VIOLENCE AND IMPROVE THE WELL-BEING OF CHILDREN LIVING IN POVERTY. WITH THE HELP OF VOLUNTEERS, THE CENTER PROVIDES FREE FAMILY LAW ASSISTANCE AND LEGAL EDUCATION TO THE POOR. WE STRIVE TO EMPOWER PEOPLE IN NEED AND ASSURE THEM MEANINGFUL ACCESS TO THE COURTS.</p>
+    </div>
+
+    <div class="vision">
+      <p>VISION</p>
+      <p class="summary-text">WE ASPIRE TO CREATE A COMMUNITY WHERE POVERTY IS NOT A BARRIER TO THOSE WHO SEEK TO RESOLVE CRITICAL FAMILY LAW MATTERS.</p>
+    </div>
+
+    <div class="about">
+      <p>ABOUT</p>
+      <p class="summary-text">THE HARRIETT BUHAI CENTER FOR FAMILY LAW (THE CENTER) WAS FOUNDED IN THE EARLY 1980S BY BLACK WOMEN LAWYERS ASSOCIATION OF LOS ANGELES, THE LOS ANGELES COUNTY BAR AND WOMEN LAWYERS ASSOCIATION OF LOS ANGELES. SINCE ITS INCEPTION, THE CENTER HAS SERVED AS A CORNERSTONE OF FAMILY LAW AND DOMESTIC VIOLENCE ASSISTANCE FOR LOW-INCOME PERSONS IN CALIFORNIA.</p>
+    </div>
+
+    <a class="social button hbcfl" href="//www.hbcfl.org" target="_blank">hbcfl.org</a>
+  </div>
+
+  <div class="section section--hosts">
+
+      <h4 class="hosted-header">Hosted by</h4>
+
+      <ul class="hosted-by">
+        <li>Lena Dunham
+        <li>Solange Knowles
+        <li>Maryam Nassir Zadeh
+        <li>Kate Young
+        <li>Maggie Gyllenhaal
+        <li>Hailey Gates
+        <li>Jenni Kayne
+        <li>Irene Neuwirth
+        <li>Clare Vivier
+        <li>Sarah Sophie Flicker
+        <li>Ed Droste
+        <li>Daphne Javitch
+        <li>Eleanor Friedberger
+        <li>Liz Goldwyn
+        <li>Hannah Hoffman
+        <li>Bettina Korek
+        <li>Sophie Buhai
+        <li>Amos Buhai
+        <li>Nicole Cari
+        <li>Roanne Adams
+        <li>Erin Falls
+        <li>Crystal Meers
+        <li>Elizabeth Parks
+        <li>Caitlin Rider
+        <li>Anh Do
+        <li>Rachael Yaeger
+        <li>Gina Correll Aglietti
+      </ul>
+
+      <h4 class="performances-by">Performances by</h4>
+
+      <ul class="special-performance">
+        <li>caroline polacheck of chairlift and glasser
+      </ul>
+
+      <h4 class="sponsored-by">sponsored by</h4>
+
+      <div class="sponsors">
+        <img class="buhai" src="/static/images/sponsors/buhai.svg">
+        <img class="austere" src="/static/images/sponsors/austere.svg">
+        <img class="roandco" src="/static/images/sponsors/roandco.svg">
+        <img class="human" src="/static/images/sponsors/human.svg">
+        <img class="material-vodka" src="/static/images/sponsors/material-vodka.svg">
+        <img class="yola" src="/static/images/sponsors/yola.svg">
+        <img class="proof-bakery" src="/static/images/sponsors/proof-bakery.png">
+        <img class="tsingtao" src="/static/images/sponsors/tsingtao.svg">
+      </div>
+  </div>
+
+  <div class="section section--tickets">
+    <ul id ="ticket-details">
+      <li>TICKETS LIMITED – $150 / TICKET</li>
+      <li>ALL PROCEEDS TO BENEFIT HARRIETT BUHAI CENTER FOR FAMILY LAW</li>
+      <li class="eventbrite">SPONSOR LEVELS WITH SPECIAL PERKS!</li>
+      <a class="button" id="ticket-button" href="http://www.eventbrite.com/e/fete-harriett-tickets-24754350930" target="_blank">Purchase Tickets</a>
+    </ul>
+  </div>
+
+  <div class="section section--location">
+
+    <div style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+      <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJF5-mQMrHwoAR6U1gaLNfDAc&key=AIzaSyAGVYwB0FzqIlNQv5f86uR61HLGPFWOLxc" allowfullscreen></iframe>
+    </div>
+
+    <div id="location-details">
+      <a class="social button" href="//www.facebook.com/harriettbuhaicenterforfamilylaw" target="_blank">Facebook</a>
+      <a class="social button" href="//twitter.com/hbcfl" target="_blank">Twitter</a>
+      <a class="social button" href="//www.instagram.com/feteharriett" target="_blank">Instagram</a>
+    </div>
+
+  </div>
+
+  <div class="section section--contact fp-auto-height">
+    <div class="contact-content">
+      <img class="contact-logo" class="svg social-link" src="/static/images/logo_stacked_white.svg">
+      <p class="contact-address">june 29th 2016 – austere – 912 s hill st los angeles | ca 90015</p>
+      <p class="contact-link"><a href="mailto:gang@feteharriett.com" target="_top">gang@feteharriett.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+  {# If you have at least content page type, we show a list. #}
+  {% if cms_types|size !== 0 %}
+
+    <h3>Content types you've created in the CMS so far.</h3>
+
+    <ul>
+      {% for type in cms_types %}
+        <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+  {% endif %}
+
+{% endblock %}

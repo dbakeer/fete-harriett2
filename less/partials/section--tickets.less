@@ -1,25 +1,56 @@
-#ticket-button {
-  margin-top: 50px;
-  border: 1px white solid;
-  color: #f2f0ed;
-  background: black;
-  &:hover {
-    color: black;
-    background: #f2f0ed;
-  }
-}
-
-#ticket-details {
-  padding: 0;
-}
-
-/* TICKET SECTION */
-.section--contact,
 .section--tickets {
-  background: black;
-  color: #f2f0ed;
-}
-
-.eventbrite {
-  margin-top: 50px;
+  .giving-levels {
+    border-bottom: 1px black solid;
+    text-align: left;
+    padding: 50px 0 25px 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  table {
+    text-align: left;
+  }
+  td {
+    padding: 25px;
+    @media screen and @portrait {
+      padding: 25px 0;
+    }
+  }
+  .level {
+    width: 150px;
+    @media screen and @portrait {
+      text-align: center;
+      padding: 25px 0;
+    }
+  }
+  .price {
+    width: 150px;
+    @media screen and @portrait {
+      text-align: center;
+      padding: 25px 0;
+    }
+  }
+  .description {
+    font-size: 18px;
+    @media screen and @portrait {
+      font-size: 16px !important;
+    }
+  }
+  .ticket-table {
+    max-width: 800px;
+    margin: 0 auto;
+    @media screen and @portrait {
+      font-size: 16px !important;
+    }
+  }
+  .clickable-row {
+    text-align: left;
+    background: #f2e5ca;
+    color: black;
+    transition: color 0.7s, background 0.7s;
+  }
+  .clickable-row:hover {
+    background: black;
+    color: #f2e5ca;
+    cursor: pointer;
+  }
 }
