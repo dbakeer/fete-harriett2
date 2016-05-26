@@ -9,4 +9,39 @@
   @media screen and (min-width: 800px) and @landscape {
     padding: 0 150px;
   }
+  &:nth-child(even) {
+    background-color: @black;
+    color: @white;
+
+    .button {
+      border-color: @white;
+      color: @white;
+      &:hover {
+        background-color: @white;
+        color: @black;
+      }
+    }
+
+
+  }
+  &:nth-child(odd) {
+    background-color: @tan;
+    color: @black;
+
+    .button {
+      border-color: @black;
+      color: @black;
+      &:hover {
+        background-color: @black;
+        color: @white;
+      }
+    }
+
+  }
+
+
+  .inner {
+    margin: auto;
+    max-width: 768px;
+  }
 }
