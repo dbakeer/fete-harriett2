@@ -3,16 +3,13 @@ $('html').hide();
 var themeArray = [
   'nil',
   'transparent',  // fete harriet
-  'dark',   // event
-  'light',  // details
-  'dark',   // hosted by
-  'light',  // about
-  'dark',   // tickets
-  'light',  // auction
-  'dark',   // location
-  'light',  // donors
-  'light',  // credits
-  'light',  // contact
+  'light', //event
+  'dark', //about
+  'light', //tickets
+  'light', //auction
+  'light', //location
+  'light', //donors
+  'dark' //contacts
 ];
 
 
@@ -27,9 +24,10 @@ $(document).ready(function() {
   var $header = $('header');
 
   $('#fullpage').fullpage({
-    anchors: ['', 'event', 'details', 'hostedby', 'about', 'tickets', 'auction', 'location', 'donors', 'credits', 'contact'],
+    anchors: ['feteharriett', 'event',  'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
     menu: '#menu',
-    responsiveHeight: 548,
+    responsiveHeight: 1600,
+    autoScrolling: false,
     navigation: true,
     navigationPosition: 'left',
     navigationTooltips: ['event', 'about', 'tickets', 'auction', 'location', 'donors'],

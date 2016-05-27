@@ -6,8 +6,7 @@
     max-width: 750px;
     @media @portrait {
       text-align: center;
-      margin: 0 0 1em;
-      border-bottom: 1px black solid;
+      border-bottom: 1px solid black;
     }
   }
   table {
@@ -24,9 +23,6 @@
     }
     .ticket-category {
       padding: 15px 5px 15px 5px;
-      a {
-        color: white;
-      }
     }
     .purchase-ticket {
       color: black;
@@ -69,26 +65,12 @@
   .clickable-row {
     text-align: left;
     transition: color 0.7s, background 0.7s;
+    background: @tan;
+    color: black;
     &:hover {
       cursor: pointer;
+      background: black;
+      color: @tan;
     }
-  }
-}
-
-.section:nth-child(even) .clickable-row {
-  background: @black;
-  color: @white;
-  &:hover {
-    background: @white;
-    color: @black;
-  }
-}
-
-.section:nth-child(odd) .clickable-row {
-  background: @tan;
-  color: black;
-  &:hover {
-    background: black;
-    color: @tan;
   }
 }

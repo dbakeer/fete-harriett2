@@ -30,8 +30,10 @@
   font-size: 22px;
   text-align: center;
   overflow: hidden;
+  &:extend(.light);
 
-  &:nth-child(even) {
+  &.section--about,
+  &.section--contact {
     &:extend(.dark);
     .button {
       border-color: @white;
@@ -42,22 +44,6 @@
       }
     }
   }
-
-  &:nth-child(odd) {
-    &:extend(.light);
-  }
-
-  &.section--credits {
-    background-color: @tan;
-    color: @black;
-  }
-
-  &.section--contact {
-    background-color: @black;
-    color: @white;
-  }
-
-
   .inner {
     margin: 2rem auto;
     max-width: 768px;
