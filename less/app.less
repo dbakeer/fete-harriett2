@@ -1,7 +1,11 @@
 @tablet_portrait: ~"(min-width: 768px)";
+@tablet_landscape: ~"(min-width: 1024px)";
+
+@phablet_portrait: ~"(min-width: 414px)";
+@phablet_landscape: ~"(min-width: 736px)";
+
 @portrait: ~"(orientation: portrait)";
 @landscape: ~"(orientation: landscape)";
-
 
 @import "_font-face";
 @import "partials/header";
@@ -27,18 +31,27 @@
 @black: ~"#000000";
 @white: ~"#FFFFFF";
 
+html {
+  font-family: TradeGothic;
+  font-size: 16px;
+  @media @tablet_landscape {
+    font-size: 22px;
+  }
+}
+
 body {
   margin: 0 10px;
   text-transform: uppercase;
-  font-family: TradeGothic;
   display: block;
-  font-size: 100%;
+}
+
+#fp-nav {
+  background: rgba(0,0,128,.5);
 }
 
 
 .button {
   display: inline-block;
-  font-family: TradeGothic;
   min-width: 200px;
   border: 1px black solid;
   transition-property: color, background, border-color;
