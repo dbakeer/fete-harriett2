@@ -24,6 +24,9 @@ header {
   &[data-theme="dark"] a {
     color: @white;
   }
+  &[data-theme="transparent"] a {
+    color: transparent;
+  }
 
   .title {
     padding: 0;
@@ -105,5 +108,9 @@ header {
   header[data-theme="dark"] ~ & {
     color: @white;
   }
+  header[data-theme="transparent"] ~ & {
+    color: transparent;
+  }
+
 
 }

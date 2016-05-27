@@ -1,6 +1,14 @@
 <div class="section section--donors">
   <div class="inner">
 
+    <p>Donors</p>
+<ul class="donor-list">
+  {% set data = cms.donors %}
+  {% for object in data %}
+    {{ object.wysiwyg_text|safe }}
+  {% endfor %}
+</ul>
+
     <div class="sponsors">
       <h4 class="sponsored-by">a special thanks to</h4>
       <img class="refinery29" src="/static/images/sponsors/Refinery29.svg">
