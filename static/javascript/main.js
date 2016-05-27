@@ -29,7 +29,6 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['', 'event', 'details', 'hostedby', 'about', 'tickets', 'auction', 'location', 'donors', 'credits', 'contact'],
     menu: '#menu',
-    // responsiveHeight: 1300,
     responsiveHeight: 548,
     navigation: true,
     navigationPosition: 'left',
