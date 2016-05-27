@@ -2,18 +2,17 @@ $('html').hide();
 
 var themeArray = [
   'nil',
-  'light',
-  'dark',
-  'light',
-  'dark',
-  'light',
-  'dark',
-  'light',
-  'dark',
-  'light',
-  'dark',
-  'light',
-  'dark'
+  'light',  // fete harriet
+  'dark',   // event
+  'light',  // details
+  'dark',   // hosted by
+  'light',  // about
+  'dark',   // tickets
+  'light',  // auction
+  'dark',   // location
+  'light',  // donors
+  'light',  // credits
+  'light',  // contact
 ];
 
 

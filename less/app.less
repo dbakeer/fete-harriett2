@@ -33,10 +33,10 @@
 
 html {
   font-family: TradeGothic;
-  font-size: 16px;
-  @media @tablet_landscape {
-    font-size: 22px;
-  }
+  font-size: 14px;
+  // @media @tablet_landscape {
+  //   font-size: 22px;
+  // }
 }
 
 body {
@@ -45,16 +45,13 @@ body {
   display: block;
 }
 
-#fp-nav {
-  background: rgba(0,0,128,.5);
-}
-
 
 .button {
   display: inline-block;
   min-width: 200px;
-  border: 1px black solid;
-  transition-property: color, background, border-color;
+  border: 1px solid @black;
+  color: @black;
+  transition-property: color, background;
   transition-duration: 700ms;
   font-size: 14px;
   padding: 10px 3px;
@@ -66,7 +63,6 @@ body {
   &:hover {
     color: #f2f0ed;
     background: black;
-    border: 1px #f2f0ed solid;
     transition-duration: 350ms;
   }
   &:focus {
@@ -80,4 +76,13 @@ ul {
 
 footer {
   font-size: 14px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.57142857142857rem;
+}
+h3 {
+  font-weight: normal;
+  font-size: 1.57142857142857rem;
 }
