@@ -11,7 +11,6 @@ var themeArray = [
   'light',
   'dark',
   'light',
-  'dark',
   'light',
   'dark'
 ];
