@@ -1,7 +1,11 @@
 @tablet_portrait: ~"(min-width: 768px)";
+@tablet_landscape: ~"(min-width: 1024px)";
+
+@phablet_portrait: ~"(min-width: 414px)";
+@phablet_landscape: ~"(min-width: 736px)";
+
 @portrait: ~"(orientation: portrait)";
 @landscape: ~"(orientation: landscape)";
-
 
 @import "_font-face";
 @import "partials/header";
@@ -27,21 +31,27 @@
 @black: ~"#000000";
 @white: ~"#FFFFFF";
 
+html {
+  font-family: TradeGothic;
+  font-size: 14px;
+  // @media @tablet_landscape {
+  //   font-size: 22px;
+  // }
+}
+
 body {
   margin: 0 10px;
   text-transform: uppercase;
-  font-family: TradeGothic;
   display: block;
-  font-size: 100%;
 }
 
 
 .button {
   display: inline-block;
-  font-family: TradeGothic;
   min-width: 200px;
-  border: 1px black solid;
-  transition-property: color, background, border-color;
+  border: 1px solid @black;
+  color: @black;
+  transition-property: color, background;
   transition-duration: 700ms;
   font-size: 14px;
   padding: 10px 3px;
@@ -53,7 +63,6 @@ body {
   &:hover {
     color: #f2f0ed;
     background: black;
-    border: 1px #f2f0ed solid;
     transition-duration: 350ms;
   }
   &:focus {
@@ -67,4 +76,37 @@ ul {
 
 footer {
   font-size: 14px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.57142857142857rem;
+}
+h3 {
+  font-weight: normal;
+  font-size: 1.57142857142857rem;
+}
+
+.fp-controlArrow.fp-next {
+  border-width: 14.5px 0 14.5px 10px;
+  border-color: transparent transparent transparent #060505;
+  @media @tablet_landscape {
+    border-width: 28.5px 0 28.5px 20px;
+  }
+}
+
+.fp-controlArrow.fp-prev {
+  display: none;
+  border-width: 14.5px 10px 14.5px 0;
+  border-color: transparent #060505 transparent transparent;
+  @media @tablet_landscape {
+    border-width: 28.5px 20px 28.5px 0;
+  }
+}
+
+.fp-controlArrow {
+  margin-top: -14px;
+  @media @tablet_landscape {
+    margin-top: -28px;
+  }
 }
