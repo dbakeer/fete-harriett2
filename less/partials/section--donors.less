@@ -4,9 +4,10 @@
     max-width: 876px;
   }
   .donor-list {
-    @media @tablet_portrait {
-      column-width: 186px;
-    }
+    // UNCOMMENT WHEN WE GET MORE THAN THREE DONORS
+    // @media @tablet_portrait {
+    //   column-width: 186px;
+    // }
     margin: 1em auto;
     max-width: 808px;
     padding-left: 0;
@@ -33,9 +34,11 @@
     img {
       margin: 1.5em;
       vertical-align: middle;
-      font-size: .5rem;
-      @media @phablet_portrait {
-        font-size: 1rem;
+      font-size: 1rem;
+      @media screen and (max-width: 900px) {
+        display: flex;
+        margin: 0 auto;
+        padding: 1em 0;
       }
     }
   }
@@ -46,30 +49,33 @@
     margin: 0 0 2em 0;
   }
   .refinery29 {
-    height: 3.5em;
+    height: 5.5em;
   }
   .buhai {
-    height: .9em;
-  }
-  .austere {
-    height: 1.3em;
-  }
-  .yola {
-    height: 2.3em;
-  }
-  .tsingtao {
-    height: 2em;
-  }
-  .roandco {
-    height: .9em;
-  }
-  .human {
-    height: .8em;
-  }
-  .material-vodka {
     height: 1.5em;
   }
+  .austere {
+    height: 2em;
+  }
+  .yola {
+    height: 3.3em;
+  }
+  .tsingtao {
+    height: 3em;
+  }
+  .roandco {
+    height: 1.5em;
+  }
+  .human {
+    height: 1.2em;
+  }
+  .material-vodka {
+    height: 2.5em;
+  }
   .proof-bakery {
-    height: 4em;
+    height: 6em;
+  }
+  .michaelstars {
+    height: 3.2em;
   }
 }

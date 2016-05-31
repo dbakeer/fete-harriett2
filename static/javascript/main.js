@@ -26,7 +26,6 @@ $(document).ready(function() {
     autoScrolling: false,
     navigation: true,
     navigationPosition: 'left',
-    navigationTooltips: ['event', 'about', 'tickets', 'auction', 'location', 'donors'],
     onLeave: function(index, nextIndex, direction) {
       var theme = themeArray[nextIndex];
       $header.attr('data-theme', theme);
