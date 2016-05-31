@@ -26,16 +26,15 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['feteharriett', 'event',  'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
     menu: '#menu',
-    // responsiveHeight: 1600,
-    // autoScrolling: false,
-    scrollOverflow: true,
-		scrollOverflowOptions: {
-		  scrollbars: true,
-		  mouseWheel: true,
-		  hideScrollbars: false,
-		  fadeScrollbars: false,
-		  disableMouse: true
-    },
+    responsiveHeight: 1600,
+    autoScrolling: false,
+    // scrollOverflow: true,
+		// scrollOverflowOptions: {
+		//   scrollbars: true,
+		//   mouseWheel: true,
+		//   hideScrollbars: false,
+		//   fadeScrollbars: false
+    // },
     navigation: true,
     navigationPosition: 'left',
     navigationTooltips: ['event', 'about', 'tickets', 'auction', 'location', 'donors'],

@@ -7,6 +7,10 @@
 @portrait: ~"(orientation: portrait)";
 @landscape: ~"(orientation: landscape)";
 
+@tan: ~"#F2E5CA";
+@black: ~"#000000";
+@white: ~"#FFFFFF";
+
 @import "_font-face";
 @import "partials/header";
 
@@ -23,10 +27,6 @@
 .slimScrollDiv {
   -webkit-overflow-scrolling: touch;
 }
-
-@tan: ~"#F2E5CA";
-@black: ~"#000000";
-@white: ~"#FFFFFF";
 
 html {
   font-family: TradeGothic;
@@ -56,31 +56,31 @@ body {
   text-transform: uppercase;
   &:hover {
     color: #f2f0ed;
-    background: black;
+    background: @black;
     transition-duration: 350ms;
   }
   &:focus {
     outline: 0;
   }
 }
+
 ul {
   line-height: normal;
   list-style-type: none;
-}
-
-footer {
-  font-size: 14px;
+  padding-left: 0;
 }
 
 h2 {
   font-weight: normal;
   font-size: 1.57142857142857rem;
 }
+
 h3 {
   font-weight: normal;
   font-size: 1.57142857142857rem;
   margin: 3em 0 1em;
 }
+
 h4 {
   font-weight: normal;
   font-size: 1.57142857142857rem
@@ -108,8 +108,4 @@ h4 {
   @media @tablet_landscape {
     margin-top: -28px;
   }
-}
-
-ul {
-  padding-left: 0;
 }
