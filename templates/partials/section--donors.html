@@ -1,48 +1,28 @@
 <div class="section section--donors">
-  <div class="inner">
-
-    <h3>Donors</h3>
-    <ul class="donor-list">
-      {% set data = cms.donors %}
-      {% for object in data %}
-      {{ object.wysiwyg_text|safe }}
-      {% endfor %}
-    </ul>
-
-    <h3>Planning Committee</h3>
-    <div class="planning-list">
-      Nicole Cari<br>
-      Anh Do<br>
-      Elizabeth Parks Kibbey<br>
-      Erin Falls<br>
-      Carlye Packer<br>
-      Caitlin Rider<br>
-      Gina Correll Anglietti<br>
-      Sophie Buhai<br>
-      Amos Buhai<br>
-      Emily Nordwind
+    <div class="inner">
+        <h4>Sponsors</h4>
+        <div class="sponsors">
+            <div class="sponsor-icon">
+                <img src="/static/images/sponsors/roandco.svg">
+            </div>
+            <div class="sponsor-icon">
+                <img src="/static/images/sponsors/yola.svg">
+            </div>
+            <div class="sponsor-icon">
+                <img src="/static/images/sponsors/human.svg">
+            </div>
+            <div class="sponsor-icon">
+                <img src="/static/images/sponsors/buhai.svg">
+            </div>
+            <div class="sponsor-icon">
+                <img class="bbla" src="/static/images/sponsors/bbla.png">
+            </div>
+            <div class="sponsor-icon">
+                <img class="msevent" src="/static/images/sponsors/msevent.svg">
+            </div>
+            <div class="sponsor-icon">
+                <img class="proof-bakery" src="/static/images/sponsors/proof-bakery.png">
+            </div>
+        </div>
     </div>
-
-    <div class="sponsors">
-      <h4 class="sponsored-by">party planning by</h4>
-      <img class="holiday" src="/static/images/sponsors/holiday.svg">
-      <h4 class="sponsored-by2">Marisa Suarez-Orozco<br/>of holiday celebrate</h4>
-      <h4 class="sponsored-by">a special thanks to</h4>
-      <img class="refinery29" src="/static/images/sponsors/Refinery29.svg">
-      <h4 class="sponsored-by3">for their generous support</h4>
-      <img class="buhai" src="/static/images/sponsors/buhai.svg">
-      <img class="austere" src="/static/images/sponsors/austere.svg">
-      <img class="roandco" src="/static/images/sponsors/roandco.svg">
-      <img class="human" src="/static/images/sponsors/human.svg">
-      <img class="yola" src="/static/images/sponsors/yola.svg">
-      <img class="tsingtao" src="/static/images/sponsors/tsingtao.svg">
-      <img class="proof-bakery" src="/static/images/sponsors/proof-bakery.png">
-      <img class="msevent" src="/static/images/sponsors/msevent.svg">
-      <img class="bbla" src="/static/images/sponsors/bbla.png">
-      <img class="material-vodka" src="/static/images/sponsors/material-vodka.svg">
-      <img class="michaelstars" src="/static/images/sponsors/michaelstars.svg">
-      <img class="popup" src="/static/images/sponsors/popup.svg">
-    </div>
-
-  </div>
 </div>

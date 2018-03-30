@@ -1,8 +1,8 @@
 var themeArray = [
   'nil',
   'transparent',  //fete harriett
-  'light',        //event
-  'dark',         //about
+  'red',        //event
+  'light',         //about
   'light',        //tickets
   'light',        //auction
   'light',        //location
@@ -20,7 +20,7 @@ $(document).ready(function() {
   var $header = $('header');
 
   $('#fullpage').fullpage({
-      anchors: ['feteharriett', 'event',  'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
+      anchors: ['feteharriett', 'event', 'hosts', 'about', 'tickets', 'sponsors', 'contact'],
       menu: '#menu',
       responsiveHeight: 1600,
       autoScrolling: false,
@@ -35,3 +35,13 @@ $(document).ready(function() {
       }
     });
 });
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($('li[data-menuanchor="hosts"]').hasClass('active')) {
+            $('li[data-menuanchor="event"]').hide();
+        } else {
+            $('li[data-menuanchor="event"]').show();
+        }
+    })
+})
