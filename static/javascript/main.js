@@ -20,18 +20,18 @@ $(document).ready(function() {
   var $header = $('header');
 
   $('#fullpage').fullpage({
-    anchors: ['feteharriett', 'event',  'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
-    menu: '#menu',
-    responsiveHeight: 1600,
-    autoScrolling: false,
-    navigation: true,
-    navigationPosition: 'left',
-    onLeave: function(index, nextIndex, direction) {
-      var theme = themeArray[nextIndex];
-      $header.attr('data-theme', theme);
-      $header.addClass('active');
-      $('.event-date').addClass('active');
-      $('#fp-nav').addClass('mobile-active');
-    }
-  });
+      anchors: ['feteharriett', 'event',  'about', 'tickets', 'auction', 'location', 'donors', 'contact'],
+      menu: '#menu',
+      responsiveHeight: 1600,
+      autoScrolling: false,
+      navigation: true,
+      navigationPosition: 'left',
+      onLeave: function(index, nextIndex, direction) {
+          var theme = themeArray[nextIndex];
+          $header.attr('data-theme', theme);
+          $header.addClass('active');
+          $('.event-date').addClass('active');
+          $('#fp-nav').addClass('mobile-active');
+      }
+    });
 });
