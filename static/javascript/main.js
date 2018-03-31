@@ -22,10 +22,8 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
       anchors: ['feteharriett', 'event', 'hosts', 'about', 'tickets', 'sponsors', 'contact'],
       menu: '#menu',
-      // responsiveHeight: 1600,
+      responsiveHeight: 1600,
       autoScrolling: false,
-      navigation: true,
-      navigationPosition: 'left',
       onLeave: function(index, nextIndex, direction) {
           var theme = themeArray[nextIndex];
           $header.attr('data-theme', theme);
