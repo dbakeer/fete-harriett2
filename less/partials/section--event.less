@@ -1,15 +1,18 @@
-.section--event {
-  font-size: 22px;
-  @media @tablet_portrait {
-    font-size: 22px;
-  }
-  #info-details {
-    margin-top: 3em;
-  }
-  .inner {
-    margin: 8rem auto;
-  }
-  .hosted-by {
-    padding-left: 0;
-  }
+.section--event .event-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media @tablet_portrait {
+        flex-direction: row;
+    }
+    .button {
+        margin: 0 0 2rem;
+        &:last-of-type {
+            margin: 0;
+        }
+        @media @tablet_portrait {
+            margin: 0 2rem 0 0;
+        }
+    }
 }
