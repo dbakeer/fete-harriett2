@@ -1,19 +1,45 @@
-.button {
-    display: inline-block;
-    min-width: 240px;
-    padding: 20px 0;
-    border: 1px solid @black;
+a {
     color: @black;
-    transition-property: color, background;
-    transition-duration: 700ms;
-    box-sizing: border-box;
-    line-height: normal;
+    border-bottom: 2px solid transparent;
+    transition: .3s all ease;
     text-transform: uppercase;
     text-decoration: none;
-    @media @tablet_portrait {
+    font-size: 17px;
+    &.paragraph {
         font-size: 24px;
+        line-height: 36px;
+        display: inline-block;
+        border-bottom: 1px solid @black;
+        text-transform: none;
+        @media @tablet_portrait {
+            font-size: 30px;
+            line-height: 23px;
+        }
     }
     &:hover {
+        color: @tan;
+        border-bottom: 1px solid @tan;
+    }
+    &.button {
+        display: inline-block;
+        min-width: 240px;
+        padding: 20px 0;
+        border: 1px solid @black;
+        color: @black;
+        background: transparent;
+        transition-property: color, background;
+        transition-duration: 700ms;
+        box-sizing: border-box;
+        line-height: normal;
+        text-transform: uppercase;
         text-decoration: none;
+        @media @tablet_portrait {
+            font-size: 24px;
+        }
+        &:hover {
+            text-decoration: none;
+            background: @black;
+            color: @tan;
+        }
     }
 }

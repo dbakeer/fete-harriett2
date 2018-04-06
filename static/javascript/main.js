@@ -7,7 +7,7 @@ var themeArray = [
   'light',        //auction
   'light',        //location
   'light',        //donors
-  'light'         //contacts
+  'red'         //contacts
 ];
 
 
@@ -50,4 +50,6 @@ $(document).ready(function(){
     $('.mobile-header li').click(function(){
         $(this).parents('.mobile-header').removeClass('open');
     })
+
+    $('body').fadeIn(800);
 })

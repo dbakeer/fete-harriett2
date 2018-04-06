@@ -1,8 +1,10 @@
 .section--feteharriett {
     .art-splash {
+        opacity: 0;
         z-index: 4;
         position: relative;
         margin: auto;
+        transition: 1s opacity ease;
         @media @landscape {
             width: 44vw;
         }
@@ -20,5 +22,8 @@
                 height: 22rem;
             }
         }
+    }
+    &.active {
+        .art-splash { opacity:1; }
     }
 }
