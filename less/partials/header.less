@@ -129,5 +129,35 @@ header {
         color: transparent;
     }
 
+    &.header {
+        display:none;
+        @media @tablet_portrait {
+            display:block;
+        }
+    }
+}
 
+.mobile-header { position:fixed; z-index:10; width:100%; top:0; left:0;
+    .mobile-header_wrapper { width:100%; z-index:10; display:flex; align-items:center; height:45px; padding:0 1rem; background-color:@red; border-bottom:1px solid @black; position:relative;
+        .menu { background-image: url('/static/images/icons/icon-menu.png'); width:20px; height:15px; background-size:contain; background-position:center center; background-repeat:no-repeat; z-index:11;
+        &:hover { cursor:pointer; }
+        }
+        .mobile-title { position:absolute; width:10rem; right:0; left:0; text-align:center; margin:0 auto; }
+        @media @tablet_portrait {
+            display:none;
+        }
+    }
+    .nav { display:none; background:@tan;
+        li[data-menuanchor="hosts"] { display:none; }
+    }
+    &.open { height:100vh;
+        .mobile-header_wrapper { background-color:@tan;
+            .menu { background-image: url('/static/images/icons/icon-close.png'); }
+        }
+        .nav { display:flex; margin:0 auto; height:100%; align-items:center; justify-content:flex-start; flex-direction:column; padding:2rem;
+            li { margin-bottom:2rem;
+                &:last-of-type { margin-bottom:0; }
+            }
+        }
+    }
 }

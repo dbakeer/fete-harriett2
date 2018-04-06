@@ -42,4 +42,12 @@ $(document).ready(function(){
             $('li[data-menuanchor="event"]').show();
         }
     })
+
+    $('.mobile-header .menu').click(function(){
+        $(this).parents('.mobile-header').toggleClass('open');
+    })
+
+    $('.mobile-header li').click(function(){
+        $(this).parents('.mobile-header').removeClass('open');
+    })
 })

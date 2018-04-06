@@ -65,7 +65,3 @@ module.exports = function(grunt) {
   require('./options/generatorOptions.js')(grunt);
   grunt.loadTasks('tasks');
 };
-
-
-
-
