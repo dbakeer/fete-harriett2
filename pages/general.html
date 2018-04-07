@@ -1,0 +1,76 @@
+{# ------------------------------------------------------- #}
+{# ONE OFF VIEW general #}
+{# This page can use any data from http:localhost:2000/cms/#/form/general/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this general's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ cms.general.name }}{% endblock %}
+{% block content %}
+  <h1>{{ cms.general.name }}</h1>
+  <ul>
+      <li>
+        <strong>Name: </strong>
+        {{ cms.general.name }}
+      </li>
+      <li>
+        <strong>Create Date: </strong>
+        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
+        {{ cms.general.create_date|date('F d Y') }}
+      </li>
+      <li>
+        <strong>Last Updated: </strong>
+        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
+        {{ cms.general.last_updated|date('F d Y') }}
+      </li>
+      <li>
+        <strong>Event Date: </strong>
+        {{ cms.general.event_date }}
+      </li>
+      <li>
+        <strong>Event Time: </strong>
+        {{ cms.general.event_time }}
+      </li>
+      <li>
+        <strong>Address: </strong>
+        {# Loop of your Repeatable Form items. Remember, you can sort the order in your CMS if you need. #}
+        <ul>
+        {% for row in cms.general.address %}
+            <li>
+              <strong>Address Line: </strong>
+              {{ row.address_line }}
+            </li>
+        {% endfor %}
+        </ul>
+      </li>
+      <li>
+        <strong>Contact E-mail: </strong>
+        {{ cms.general.contact_email }}
+      </li>
+      <li>
+        <strong>Facebook URL: </strong>
+        {{ cms.general.facebook_url }}
+      </li>
+      <li>
+        <strong>Instagram URL: </strong>
+        {{ cms.general.instagram_url }}
+      </li>
+      <li>
+        <strong>Twitter URL: </strong>
+        {{ cms.general.twitter_url }}
+      </li>
+      <li>
+        <strong>Preview URL: </strong>
+        {{ cms.general.preview_url }}
+      </li>
+      <li>
+        <strong>Slug: </strong>
+        {{ cms.general.slug }}
+      </li>
+  </ul>
+{% endblock %}

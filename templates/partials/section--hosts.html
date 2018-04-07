@@ -1,53 +1,10 @@
 <div class="section section--hosts">
     <div class="inner">
-        <div class="content-margin">
-            <h3 class="hosted-header">Hosted by</h3>
-            <ul class="hosted-by">
-                <li>Ghada Amer</li>
-                <li>Amanda Chantal Bacon</li>
-                <li>Lynda Benglis</li>
-                <li>Lena Dunham</li>
-                <li>Hailey Gates</li>
-                <li>Kim Gordon </li>
-                <li>Maggie Gyllenhaal</li>
-                <li>Jenny Holzer </li>
-                <li>Miranda July</li>
-                <li>Jesse Kamm</li>
-                <li>Jenni Kayne </li>
-                <li>Ana Kraš</li>
-                <li>Lykke Li</li>
-                <li>Maryam Nassir Zadeh </li>
-                <li>Joanna Newsom</li>
-                <li>Busy Philipps</li>
-                <li>Maya Rudolph </li>
-                <li>Clare Vivier</li>
-            </ul>
-        </div>
-
-        <div class="content-margin">
-            <h3 class="hosted-header">Chairs</h3>
-            <ul class="hosted-by">
-                <li>Amos Buhai</li>
-                <li>Sophie Buhai</li>
-                <li>Anh Do</li>
-                <li>Crystal Meers</li>
-            </ul>
-        </div>
-
-        <div class="content-margin">
-            <h3 class="hosted-header">Planning Committee</h3>
-            <ul class="hosted-by">
-                <li>Roanne Adams</li>
-                <li>Kristen Breitenbach </li>
-                <li>Alexis Brunswick </li>
-                <li>Ashley Butler</li>
-                <li>Nicole Cari </li>
-                <li>Clara Cullen</li>
-                <li>Nicole Daniels </li>
-                <li>Claire Read</li>
-                <li>Kaylie Schiff</li>
-            </ul>
-        </div>
-
+        {% for host in cms.event.hosts %}
+            <div class="content-margin">
+                <h3>{{ host.header }}</h3>
+                {{ host.host_list | safe }}
+            </div>
+        {% endfor %}
     </div>
 </div>

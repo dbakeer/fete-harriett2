@@ -11,39 +11,22 @@
     }
 }
 
-.dark {
-  background-color: @black;
-  color: @white;
-
-  .button {
-    border-color: @white;
-    color: @white;
-    &:hover {
-      background-color: @white;
-      color: @red;
-    }
-  }
- }
-
 .light {
-  background-color: @tan;
-  color: @black;
-
-  .button {
-    border-color: @black;
+    background-color: @tan;
     color: @black;
-    &:hover {
-      background-color: @black;
-      color: @tan;
+    .button {
+        border-color: @black;
+        color: @black;
+        &:hover {
+            background-color: @black;
+            color: @tan;
+        }
     }
-  }
 }
 
 .section {
-    font-size: 22px;
-    @media @portrait {
-        font-size: 18px;
-    }
+    font-size: 1.375rem;
+    @media @portrait { font-size: 1.125rem; }
     text-align: center;
     overflow: hidden;
     &:extend(.light);
@@ -61,12 +44,16 @@
             }
         }
     }
+    &.section--contact .inner { opacity:1; }
     .inner {
         padding: 4rem 2rem;
         margin: 0 auto;
         max-width: 768px;
-        @media @tablet_portrait {
-            padding: 6rem 4rem;
-        }
+        opacity: 0.4;
+        transition: 1s opacity ease;
+        @media @tablet_portrait { padding: 6rem 4rem; }
+    }
+    &.active .inner {
+        opacity: 1;
     }
 }

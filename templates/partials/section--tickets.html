@@ -1,70 +1,19 @@
 <div class="section section--tickets">
 
     <div class="inner">
-        <h3>Giving Levels</h3>
+        <h3>{{ cms.tickets.name }}</h3>
 
-        <div class="giving-level">
-            <div class="header">
-                <h3>Level 1</h3>
-                <h3>$150</h3>
+        {% for level in cms.tickets.giving_level %}
+            <div class="giving-level">
+                <div class="header">
+                    <h3>{{ level.level }}</h3>
+                    <h3>{{ level.price }}</h3>
+                    <h3>{{ level.level_type }}</h3>
+                </div>
+                {{ level.description | safe }}
+                <a href="{{ level.button_url }}" class="button">{{ level.button_text }}</a>
             </div>
-            <p>1 ticket</p>
-            <p>Dance, eat, drink</p>
-            <a href="#" class="button">Buy Now</a>
-        </div>
-
-        <div class="giving-level">
-            <div class="header">
-                <h3>Level 2</h3>
-                <h3>$300</h3>
-            </div>
-            <p>1 VIP ticket</p>
-            <p>VIP seated section, VIP tequila tasting, VIP Salazar menu</p>
-            <a href="#" class="button">Buy Now</a>
-        </div>
-
-        <div class="giving-level">
-            <div class="header">
-                <h3>Level 3</h3>
-                <h3>$500</h3>
-            </div>
-            <p>2 VIP tickets</p>
-            <p>VIP seated section, VIP tequila tasting, VIP Salazar menu</p>
-            <a href="#" class="button">Buy Now</a>
-        </div>
-
-        <div class="giving-level">
-            <div class="header">
-                <h3>Level 4</h3>
-                <h3>$1000</h3>
-                <h3>Harriett Gang Friend</h3>
-            </div>
-            <p>Public Listing on website and program</p>
-            <p>2 VIP tickets</p>
-            <p>VIP seated section, VIP tequila tasting, VIP Salazar menu</p>
-            <a href="#" class="button">Buy Now</a>
-        </div>
-
-        <div class="giving-level">
-            <div class="header">
-                <h3>Level 5</h3>
-                <h3>$5000</h3>
-                <h3>Harriett Gang Leader</h3>
-            </div>
-            <p>10 VIP tickets</p>
-            <p>VIP seated section, VIP tequila tasting, VIP Salazar menu</p>
-            <a href="#" class="button">Buy Now</a>
-        </div>
-
-        <div class="giving-level">
-            <div class="header">
-                <h3>Level 6</h3>
-                <h3>$25,000</h3>
-                <h3>Lead Sponsor</h3>
-            </div>
-            <p>Presence as the lead sponsor throughout the event, including the website, invite, program, communications, and acknowledgment throughout the evening. Please contact us directly to discuss collaboration.</p>
-            <a href="#" class="button">Buy Now</a>
-        </div>
+        {% endfor %}
 
     </div>
 

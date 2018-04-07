@@ -5,41 +5,65 @@ a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 17px;
-    &.paragraph {
-        font-size: 24px;
-        line-height: 36px;
-        display: inline-block;
-        border-bottom: 1px solid @black;
-        text-transform: none;
-        @media @tablet_portrait {
-            font-size: 30px;
-            line-height: 23px;
-        }
-    }
     &:hover {
         color: @tan;
         border-bottom: 1px solid @tan;
     }
-    &.button {
-        display: inline-block;
-        min-width: 240px;
-        padding: 20px 0;
-        border: 1px solid @black;
-        color: @black;
-        background: transparent;
-        transition-property: color, background;
-        transition-duration: 700ms;
-        box-sizing: border-box;
-        line-height: normal;
-        text-transform: uppercase;
+}
+
+p a {
+    font-size: 24px;
+    line-height: 36px;
+    display: inline-block;
+    border-bottom: 1px solid @black;
+    text-transform: none;
+}
+
+.button {
+    display: inline-block;
+    min-width: 240px;
+    padding: 20px 0;
+    border: 1px solid @black;
+    color: @black;
+    background: transparent;
+    transition-property: color, background;
+    transition-duration: 300ms;
+    box-sizing: border-box;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
         text-decoration: none;
-        @media @tablet_portrait {
-            font-size: 24px;
+        background: @black;
+        color: @tan;
+    }
+}
+
+.button-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .button {
+        margin: 0 0 2rem;
+        &:last-of-type {
+            margin: 0;
         }
-        &:hover {
-            text-decoration: none;
-            background: @black;
-            color: @tan;
+    }
+}
+
+@media @tablet_portrait {
+    p a {
+        font-size: 30px;
+        line-height: 23px;
+    }
+    .button {
+        font-size: 24px;
+    }
+    .button-grid {
+        flex-direction: row;
+        .button {
+            margin: 0 2rem 0 0;
         }
     }
 }

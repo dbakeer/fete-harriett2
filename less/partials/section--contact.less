@@ -1,34 +1,24 @@
-.section--contact .inner {
-    .social-btns {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        margin-bottom: 3rem;
-        @media @phablet_landscape {
-            flex-direction: row;
-        }
-        .button {
-            margin-bottom: 2rem;
-            &:last-of-type { margin-bottom:0; }
-            @media @phablet_landscape {
-                margin-bottom: 0;
-            }
-        }
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    h3 {
+        margin: 0 auto;
     }
-    .address {
-        h3 {
-            margin:0 0 .5rem;
-            line-height:27px;
-        }
-        &.desktop {
-            display: none;
-            @media @phablet_landscape {
-                display: block;
+}
+
+@media @tablet_portrait {
+    .contact-content {
+        flex-direction: row;
+        margin-bottom: 1rem;
+        h3 { position:relative;
+            &:after {
+                content:'|';
+                position: absolute;
+                right: -1.5rem;
             }
-        }
-        @media @phablet_landscape {
-            &.mobile { display:none; }
         }
     }
 }

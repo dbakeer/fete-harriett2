@@ -1,31 +1,12 @@
 <div class="section section--donors">
     <div class="inner">
-        <h4>Sponsors</h4>
+        <h3>{{ cms.sponsors.name }}</h3>
         <div class="sponsors">
+            {% for sponsor in cms.sponsors.sponsors %}
             <div class="sponsor-icon">
-                <img src="/static/images/sponsors/logo_roandco.svg">
+                <img src="{{ sponsor.sponsor_logo.url }}" alt="{{ sponsor.sponsor_name }}">
             </div>
-            <div class="sponsor-icon">
-                <img src="/static/images/sponsors/logo_yola.svg">
-            </div>
-            <div class="sponsor-icon">
-                <img src="/static/images/sponsors/logo_human.svg">
-            </div>
-            <div class="sponsor-icon">
-                <img src="/static/images/sponsors/logo_sophie-buhai.svg">
-            </div>
-            <div class="sponsor-icon">
-                <img class="msevent" src="/static/images/sponsors/logo_msevent.svg">
-            </div>
-            <div class="sponsor-icon">
-                <img class="proof-bakery" src="/static/images/sponsors/logo_proof-bakery.png">
-            </div>
-            <div class="sponsor-icon">
-                <img src="/static/images/sponsors/logo_holiday.svg">
-            </div>
-            <div class="sponsor-icon">
-                <img src="/static/images/sponsors/logo_moon-juice.png">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

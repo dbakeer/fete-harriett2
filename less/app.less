@@ -8,49 +8,25 @@
 
 @import "partials/section";
 @import "partials/section--feteharriett";
-@import "partials/section--event";
-@import "partials/section--about";
 @import "partials/section--tickets";
-@import "partials/section--location";
 @import "partials/section--donors";
 @import "partials/section--contact";
-@import "partials/section--auction";
 
 .slimScrollDiv {
   -webkit-overflow-scrolling: touch;
 }
 
 body {
-  margin: 0 10px;
-  display: none;
+    margin: 0 10px;
+    display: none;
+    overflow: visible;
+    &.menu-open {
+        overflow: hidden !important;
+    }
 }
 
 ul {
   line-height: normal;
   list-style-type: none;
   padding-left: 0;
-}
-
-.fp-controlArrow.fp-next {
-  border-width: 14.5px 0 14.5px 10px;
-  border-color: transparent transparent transparent #060505;
-  @media @tablet_landscape {
-    border-width: 28.5px 0 28.5px 20px;
-  }
-}
-
-.fp-controlArrow.fp-prev {
-  display: none;
-  border-width: 14.5px 10px 14.5px 0;
-  border-color: transparent #060505 transparent transparent;
-  @media @tablet_landscape {
-    border-width: 28.5px 20px 28.5px 0;
-  }
-}
-
-.fp-controlArrow {
-  margin-top: -14px;
-  @media @tablet_landscape {
-    margin-top: -28px;
-  }
 }

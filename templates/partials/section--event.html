@@ -1,18 +1,14 @@
 <div class="section section--event">
     <div class="inner">
-        <div class="content-margin">
-            <span>Please join us for an epic evening benefiting <a href="#" class="paragraph">The Harriett Buhai Center for Family Law</a> devoted to defending victims of domestic violence and protecting children living below the poverty line.</span>
-        </div>
-        <div class="content-margin">
-            <p>June 4, 2018</p>
-            <p>7pm</p>
-            <p>Salazar</p>
-            <p>2490 Fletcher Drive</p>
-            <p>Los Angeles</p>
-        </div>
-        <div class="event-btns">
-            <a href="#" class="button" target="_blank">Buy Tickets</a>
-            <a href="#" class="button" target="_blank">Donate</a>
+        {% for text in cms.event.body_text %}
+            <div class="content-margin">
+                {{ text.body_text | safe }}
+            </div>
+        {% endfor %}
+        <div class="button-grid">
+            {% for button in cms.event.buttons %}
+                <a href="{{ button.button_url }}" class="button" target="_blank">{{ button.button_text }}</a>
+            {% endfor %}
         </div>
     </div>
 </div>

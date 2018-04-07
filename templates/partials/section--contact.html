@@ -1,20 +1,19 @@
 <div class="section section--contact fp-auto-height">
     <div class="inner">
-        <div class="social-btns">
-            <a href="#" class="button">Facebook</a>
-            <a href="#" class="button">Instagram</a>
-            <a href="#" class="button">Twitter</a>
+        <div class="button-grid content-margin-small">
+            <a href="{{ cms.general.facebook_url }}" class="button">Facebook</a>
+            <a href="{{ cms.general.instagram_url }}" class="button">Instagram</a>
+            <a href="{{ cms.general.twitter_url }}" class="button">Twitter</a>
         </div>
         <div class="contact-content">
-            <h3 class="address desktop reduced-margin">June 4, 2018 | 7 PM | Salazar | 2490 Fletcher Drive | Los Angeles</h3>
-            <div class="address mobile reduced-margin">
-                <h3>June 4, 2018</h3>
-                <h3>7pm</h3>
-                <h3>Salazar</h3>
-                <h3>2490 Fletcher Drive</h3>
-                <h3>Los Angeles</h3>
-            </div>
-            <a class="contact-link" href="mailto:feteharriett@yahoo.com" target="_top">feteharriett@yahoo.com</a>
+            <h3>{{ cms.general.event_date }}</h3>
+            <h3>{{ cms.general.event_time }}</h3>
+            {% for line in cms.general.address %}
+                <h3>{{ line.address_line }}</h3>
+            {% endfor %}
+        </div>
+        <div>
+            <a class="contact-link" href="mailto:{{ cms.general.contact_email }}" target="_top">{{ cms.general.contact_email }}</a>
         </div>
     </div>
 </div>
