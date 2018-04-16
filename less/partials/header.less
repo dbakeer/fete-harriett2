@@ -27,16 +27,6 @@ header {
             border-bottom: 2px solid transparent;
         }
     }
-    &[data-theme="light"] {
-        a:hover {
-            color:@red;
-        }
-    }
-    &[data-theme="red"], &[data-theme="transparent"]  {
-        a:hover {
-            color:@tan;
-        }
-    }
     .nav {
         font-size: 14px;
         padding-left: 0;
@@ -157,6 +147,16 @@ header {
             position: absolute;
             top: 90px;
             right: 68px;
+        }
+        &[data-theme="light"] {
+            a:hover {
+                color:@red;
+            }
+        }
+        &[data-theme="red"], &[data-theme="transparent"]  {
+            a:hover {
+                color:@tan;
+            }
         }
     }
 }

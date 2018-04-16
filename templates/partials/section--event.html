@@ -5,6 +5,15 @@
                 {{ text.body_text | safe }}
             </div>
         {% endfor %}
+
+        <div class="contact-body content-margin">
+            <p>{{ cms.general.event_date }}</p>
+            <p>{{ cms.general.event_time }}</p>
+            {% for line in cms.general.address %}
+                <p>{{ line.address_line }}</p>
+            {% endfor %}
+        </div>
+
         <div class="button-grid">
             {% for button in cms.event.buttons %}
                 <a href="{{ button.button_url }}" class="button" target="_blank">{{ button.button_text }}</a>

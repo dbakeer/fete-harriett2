@@ -13,7 +13,7 @@
             width: 50vw;
         }
         .logo-fh {
-            background: url('/static/images/logo_stacked.svg');
+            background: url('/static/images/logo-fh.svg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
@@ -36,6 +36,9 @@
         left: 0;
         opacity: 0;
         transition: 1s opacity ease;
+        &:hover {
+            cursor: pointer;
+        }
     }
     &.active {
         .art-splash, .icon-arrow { opacity:1; }

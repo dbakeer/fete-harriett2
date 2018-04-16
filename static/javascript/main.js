@@ -3,7 +3,7 @@ var themeArray = [
     'transparent',  //fete harriett
     'red',          //event
     'light',        //about
-    'light',        //tickets
+    'red',        //tickets
     'light',        //auction
     'light',        //location
     'light',        //donors
@@ -45,7 +45,7 @@ $(document).ready(function(){
         $('body').toggleClass('menu-open');
     });
 
-    $('header li').click(function(){
+    $('header li, .title').click(function(){
         $(this).parents('header').removeClass('open');
         $('body').removeClass('menu-open');
     });
