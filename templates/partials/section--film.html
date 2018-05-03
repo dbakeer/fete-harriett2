@@ -1,0 +1,13 @@
+<div class="section section--film fp-auto-height">
+    <div class="inner">
+        <h3>{{ cms.film.name }}</h3>
+        <div class="film-wrapper">
+            <div class="film-cover">
+                <div class="icon-play"></div>
+            </div>
+            {{ cms.film.video }}
+            <iframe src="{{ cms.film.video_link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        {{ cms.film.description | safe }}
+    </div>
+</div>

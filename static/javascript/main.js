@@ -2,11 +2,11 @@ var themeArray = [
     'nil',
     'transparent',  //fete harriett
     'red',          //event
-    'light',        //about
-    'red',        //tickets
-    'light',        //auction
-    'light',        //location
-    'light',        //donors
+    'light',        //hosts
+    'red',          //about
+    'light',        //tickets
+    'light',        //sponsors
+    'red',          //film
     'red'           //contacts
 ];
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
     var $header = $('header');
 
     $('#fullpage').fullpage({
-        anchors: ['feteharriett', 'event', 'hosts', 'about', 'tickets', 'sponsors', 'contact'],
+        anchors: ['feteharriett', 'event', 'hosts', 'about', 'tickets', 'sponsors', 'film', 'contact'],
         menu: '#menu',
         responsiveHeight: 1600,
         autoScrolling: false,
@@ -51,4 +51,10 @@ $(document).ready(function(){
     });
 
     $('body').fadeIn(800);
+
+    $('.icon-play').click(function(){
+        $(this).closest('.film-cover').fadeOut(500).delay(400, function(){
+            $("iframe")[0].src += "&autoplay=1";
+        });
+    });
 });
